@@ -40,12 +40,14 @@ function renderNavbar(activePage = "") {
   nav.id = "navbar";
   nav.innerHTML = `
     <div class="nav-inner">
-      <a href="${root}index.html" class="nav-logo" aria-label="KeToan Cloud">
-        <div class="logo-icon">K</div>
-        <div>
-          <div class="logo-text">KeToan<span>Cloud</span></div>
-          <span class="logo-sub">Finance workspace</span>
-        </div>
+      <a href="${root}index.html"
+        class="nav-logo brand-logo-frame"
+        aria-label="KeToan Cloud">
+        <img
+          src="${root}assets/logo-ketoan-cloud.png"
+          alt="KeToan Cloud"
+          class="brand-logo-image"
+        />
       </a>
 
       <div class="nav-links">
@@ -168,12 +170,14 @@ function renderFooter() {
     <div class="footer-inner">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="${root}index.html" class="nav-logo footer-logo">
-            <div class="logo-icon">K</div>
-            <div>
-              <div class="logo-text">KeToan<span>Cloud</span></div>
-              <span class="logo-sub">Finance workspace</span>
-            </div>
+          <a href="${root}index.html"
+            class="nav-logo footer-logo brand-logo-frame"
+            aria-label="KeToan Cloud">
+            <img
+              src="${root}assets/logo-ketoan-cloud.png"
+              alt="KeToan Cloud"
+              class="brand-logo-image"
+            />
           </a>
           <p>Nền tảng kế toán cloud giúp doanh nghiệp quản lý dữ liệu tài chính, chứng từ và báo cáo trong một quy trình thống nhất.</p>
           <div class="footer-contact-list">
