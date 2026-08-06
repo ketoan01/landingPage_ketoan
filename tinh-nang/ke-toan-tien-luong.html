@@ -7,6 +7,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="../style.css"/>
+  <link rel="stylesheet" href="../theme-v5.css"/>
+  <link rel="stylesheet" href="../assets/fontawesome/css/all.min.css">
 </head>
 <body>
 
@@ -16,13 +18,13 @@
     <a href="../tinh-nang.html">Tính năng</a><span>›</span>
     <span style="color:rgba(255,255,255,.9)">Kế toán tiền lương</span>
   </div>
-  <div style="font-size:56px;margin-bottom:16px;" data-gsap="zoom-in">💰</div>
+  <div class="page-hero-icon" data-gsap="zoom-in"><i class="fa-solid fa-money-check-dollar" aria-hidden="true"></i></div>
   <div class="section-label" data-gsap="fade-up" data-delay=".05">Tính năng</div>
   <h1 class="section-title" data-gsap="fade-up" data-delay=".1">Kế toán tiền lương</h1>
   <p class="section-sub" data-gsap="fade-up" data-delay=".15">Tính lương tự động theo nhiều hình thức, quản lý BHXH, BHYT, thuế TNCN. Xuất bảng lương PDF và chuyển khoản hàng loạt qua ngân hàng.</p>
   <div style="margin-top:28px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap;" data-gsap="fade-up" data-delay=".22">
-    <a href="#" class="btn-brand" style="padding:13px 28px;">DÙNG THỬ MIỄN PHÍ</a>
-    <a href="https://www.youtube.com/watch?v=tdXOv3CimiY" target="_blank" class="btn-outline" style="color:#fff;border-color:rgba(255,255,255,.6);padding:13px 28px;">▶ Xem video demo</a>
+    <a href="#" onclick="openRegModal();return false;" class="btn-brand" style="padding:13px 28px;">ĐĂNG KÝ DÙNG THỬ</a>
+    <a href="https://www.youtube.com/watch?v=tdXOv3CimiY" target="_blank" class="btn-outline" style="color:#fff;border-color:rgba(255,255,255,.6);padding:13px 28px;"><i class="fa-solid fa-play" aria-hidden="true"></i> Xem video demo</a>
   </div>
 </section>
 
@@ -33,15 +35,15 @@
       <h2 class="section-title" data-gsap="fade-up" data-delay=".05">Xử lý lương nhanh — Chính xác — Tuân thủ luật</h2>
       <p class="section-sub" data-gsap="fade-up" data-delay=".1">KeToan tự động tính lương, trích BHXH, BHYT, BHTN và thuế TNCN theo đúng quy định hiện hành. Tích hợp chuyển khoản ngân hàng, chi lương chỉ mất vài phút.</p>
       <ul class="detail-benefits">
-        <li><div class="benefit-dot">⚡</div><div><strong>Tính lương tự động</strong>Cấu hình một lần, hệ thống tự tính lương hàng tháng dựa trên bảng chấm công và các khoản phụ cấp.</div></li>
-<li><div class="benefit-dot">📊</div><div><strong>BHXH & thuế TNCN</strong>Tự động trích BHXH, BHYT, BHTN và tính thuế TNCN lũy tiến theo biểu thuế hiện hành.</div></li>
-<li><div class="benefit-dot">🏦</div><div><strong>Chuyển khoản hàng loạt</strong>Xuất file XML chuyển khoản ngân hàng, chi lương cho toàn bộ nhân viên chỉ một giao dịch.</div></li>
-<li><div class="benefit-dot">📄</div><div><strong>Payslip chuyên nghiệp</strong>Tự động gửi phiếu lương PDF qua email cho từng nhân viên với đầy đủ chi tiết các khoản.</div></li>
+        <li><div class="benefit-dot"><i class="fa-solid fa-bolt" aria-hidden="true"></i></div><div><strong>Tính lương tự động</strong>Cấu hình một lần, hệ thống tự tính lương hàng tháng dựa trên bảng chấm công và các khoản phụ cấp.</div></li>
+<li><div class="benefit-dot"><i class="fa-solid fa-chart-line" aria-hidden="true"></i></div><div><strong>BHXH & thuế TNCN</strong>Tự động trích BHXH, BHYT, BHTN và tính thuế TNCN lũy tiến theo biểu thuế hiện hành.</div></li>
+<li><div class="benefit-dot"><i class="fa-solid fa-building-columns" aria-hidden="true"></i></div><div><strong>Chuyển khoản hàng loạt</strong>Xuất file XML chuyển khoản ngân hàng, chi lương cho toàn bộ nhân viên chỉ một giao dịch.</div></li>
+<li><div class="benefit-dot"><i class="fa-solid fa-file-lines" aria-hidden="true"></i></div><div><strong>Payslip chuyên nghiệp</strong>Tự động gửi phiếu lương PDF qua email cho từng nhân viên với đầy đủ chi tiết các khoản.</div></li>
       </ul>
     </div>
     <div data-gsap="slide-left" data-delay=".1">
       <div class="detail-visual">
-        <div class="detail-visual-inner">💰</div>
+        <div class="detail-visual-inner"><i class="fa-solid fa-money-check-dollar" aria-hidden="true"></i></div>
       </div>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px;">
         <div style="background:var(--pink-pale);border-radius:var(--radius-md);padding:16px 18px;">
@@ -79,9 +81,9 @@
     <h2 class="section-title">Tích hợp với các phân hệ khác</h2>
   </div>
   <div class="related-grid">
-    <a href="ke-toan-tong-hop.html" class="tn-card"><div class="tn-card-icon">🗂️</div><h3>Kế toán tổng hợp</h3><p>Chi phí lương tự động hạch toán vào sổ sách.</p><div class="tn-card-arrow">→</div></a>
-<a href="ket-noi-ngan-hang.html" class="tn-card"><div class="tn-card-icon">🔗</div><h3>Kết nối ngân hàng</h3><p>Chuyển khoản lương qua ngân hàng tích hợp.</p><div class="tn-card-arrow">→</div></a>
-<a href="bao-cao-tai-chinh.html" class="tn-card"><div class="tn-card-icon">📈</div><h3>Báo cáo tài chính</h3><p>Chi phí nhân công thể hiện trên báo cáo lãi lỗ.</p><div class="tn-card-arrow">→</div></a>
+    <a href="ke-toan-tong-hop.html" class="tn-card"><div class="tn-card-icon"><i class="fa-solid fa-book-open" aria-hidden="true"></i></div><h3>Kế toán tổng hợp</h3><p>Chi phí lương tự động hạch toán vào sổ sách.</p><div class="tn-card-arrow"><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></div></a>
+<a href="ket-noi-ngan-hang.html" class="tn-card"><div class="tn-card-icon"><i class="fa-solid fa-link" aria-hidden="true"></i></div><h3>Kết nối ngân hàng</h3><p>Chuyển khoản lương qua ngân hàng tích hợp.</p><div class="tn-card-arrow"><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></div></a>
+<a href="bao-cao-tai-chinh.html" class="tn-card"><div class="tn-card-icon"><i class="fa-solid fa-chart-line" aria-hidden="true"></i></div><h3>Báo cáo tài chính</h3><p>Chi phí nhân công thể hiện trên báo cáo lãi lỗ.</p><div class="tn-card-arrow"><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></div></a>
   </div>
 </section>
 
@@ -96,6 +98,7 @@
   const cta = renderCTABand();
   document.getElementById("cta-slot").replaceWith(cta);
   renderFooter();
+  refreshIcons();
 </script>
 <script src="../main.js"></script>
 </body>

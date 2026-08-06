@@ -1,510 +1,282 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>KeToan – Phần Mềm Kế Toán Online</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="style.css"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="KeToan Cloud – Nền tảng kế toán online giúp doanh nghiệp tự động hóa nhập liệu, đối chiếu và báo cáo tài chính.">
+  <title>KeToan Cloud – Phần mềm kế toán online</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="theme-v5.css">
+  <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-  <script>emailjs.init("VxLy2TYylhklg9NR5");</script>  
+  <script>window.addEventListener('DOMContentLoaded',()=>emailjs.init('VxLy2TYylhklg9NR5'));</script>
 </head>
 <body>
 
-<!-- ── HERO ── -->
 <section class="hero" id="hero">
-  <canvas id="particles"></canvas>
-  <div class="hero-content">
-    <div class="hero-eyebrow" data-gsap="fade-up">Phần mềm kế toán KeToan</div>
-    <h1 class="hero-headline" data-gsap="fade-up" data-delay=".1">
-      <em>"Tự động nhập liệu<br>tối ưu năng suất"</em>
-    </h1>
-    <div class="x10-badge" data-gsap="zoom-in" data-delay=".25">
-      <span class="x10-x">X</span><span class="x10-num">10</span>
+  <div class="hero-glow hero-glow-a"></div>
+  <div class="hero-glow hero-glow-b"></div>
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-eyebrow" data-gsap="fade-up">
+        <span class="eyebrow-dot"></span> Nền tảng kế toán cho doanh nghiệp Việt
+      </div>
+      <h1 class="hero-headline" data-gsap="fade-up" data-delay=".08">
+        Kế toán gọn hơn.<br><span>Dữ liệu rõ hơn.</span>
+      </h1>
+      <p class="hero-description" data-gsap="fade-up" data-delay=".14">
+        Kết nối hóa đơn, ngân hàng, kho và báo cáo trong một quy trình thống nhất. Giảm thao tác nhập liệu để kế toán tập trung vào kiểm soát số liệu.
+      </p>
+      <div class="hero-capabilities" data-gsap="fade-up" data-delay=".2">
+        <div><i class="fa-solid fa-receipt" aria-hidden="true"></i><span>Nhận hóa đơn tự động</span></div>
+        <div><i class="fa-solid fa-building-columns" aria-hidden="true"></i><span>Đối chiếu ngân hàng</span></div>
+        <div><i class="fa-solid fa-chart-line" aria-hidden="true"></i><span>Báo cáo tức thời</span></div>
+      </div>
+      <div class="hero-cta" data-gsap="fade-up" data-delay=".26">
+        <button type="button" onclick="openRegModal()" class="btn-brand btn-hero-primary">Đăng ký dùng thử <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+        <a href="#tinh-nang" class="btn-outline btn-hero-secondary">Xem tính năng</a>
+      </div>
+      <div class="hero-note" data-gsap="fade-up" data-delay=".32">
+        <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+        <span>Dữ liệu được phân quyền theo vai trò và lưu vết thao tác.</span>
+      </div>
     </div>
-    <div class="hero-gift" data-gsap="fade-up" data-delay=".35">
-      🎁 Tặng <strong>100 số hóa đơn đầu</strong> hoàn toàn miễn phí
-    </div>
-    <div class="hero-features" data-gsap="fade-up" data-delay=".43">
-      <div class="hero-feat"><div class="feat-icon">🖥️</div><div>Miễn phí<br><strong>Phần mềm hóa đơn</strong></div></div>
-      <div class="hero-feat"><div class="feat-icon">🔗</div><div>Miễn phí kết nối<br><strong>Hóa đơn điện tử</strong></div></div>
-    </div>
-    <div class="hero-cta" data-gsap="fade-up" data-delay=".52">
-      <button class="btn-outline" style="color:#fff;border-color:rgba(255,255,255,.7)">TƯ VẤN MIỄN PHÍ</button>
-      <a href="#" class="btn-brand" style="padding:14px 32px;font-size:14px;">DÙNG THỬ MIỄN PHÍ</a>
+
+    <div class="hero-visual" data-gsap="slide-left" data-delay=".12" aria-label="Minh hoạ sổ cái tổng hợp KeToan Cloud">
+      <div class="ledger-shadow-card"></div>
+      <div class="ledger-card">
+        <div class="ledger-topbar">
+          <div class="ledger-brandmark">K</div>
+          <div>
+            <strong>Sổ cái tổng hợp</strong>
+            <span>Kỳ kế toán: Tháng 08/2026</span>
+          </div>
+          <div class="ledger-status"><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Đã cân đối</div>
+        </div>
+        <div class="ledger-metrics">
+          <div>
+            <span>Doanh thu</span>
+            <strong>2,48 tỷ</strong>
+            <small class="positive">+18,4%</small>
+          </div>
+          <div>
+            <span>Chi phí</span>
+            <strong>1,61 tỷ</strong>
+            <small>64,9%</small>
+          </div>
+          <div>
+            <span>Lợi nhuận</span>
+            <strong>870 triệu</strong>
+            <small class="positive">+12,7%</small>
+          </div>
+        </div>
+        <div class="ledger-table-head">
+          <span>Chứng từ</span><span>Nội dung</span><span>Trạng thái</span><span>Giá trị</span>
+        </div>
+        <div class="ledger-row">
+          <span>HD-0824</span><span>Doanh thu bán hàng</span><span><b class="dot dot-green"></b>Đã hạch toán</span><strong>128.500.000</strong>
+        </div>
+        <div class="ledger-row">
+          <span>NH-0418</span><span>Thu tiền ngân hàng</span><span><b class="dot dot-green"></b>Đã đối chiếu</span><strong>86.240.000</strong>
+        </div>
+        <div class="ledger-row">
+          <span>NK-0196</span><span>Nhập kho nguyên liệu</span><span><b class="dot dot-pink"></b>Chờ duyệt</span><strong>42.800.000</strong>
+        </div>
+        <div class="ledger-chart">
+          <div class="chart-copy"><span>Dòng tiền 6 tháng</span><strong>Ổn định</strong></div>
+          <svg viewBox="0 0 420 92" role="img" aria-label="Biểu đồ dòng tiền tăng trưởng ổn định">
+            <path class="chart-area" d="M0 76 C45 72 55 76 88 55 C122 35 148 62 182 44 C220 23 246 49 280 27 C320 2 348 32 420 10 L420 92 L0 92 Z"></path>
+            <path class="chart-line" d="M0 76 C45 72 55 76 88 55 C122 35 148 62 182 44 C220 23 246 49 280 27 C320 2 348 32 420 10"></path>
+          </svg>
+        </div>
+      </div>
+      <div class="ledger-float-card">
+        <div class="float-icon"><i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i></div>
+        <div><strong>Hạch toán tự động</strong><span>12 chứng từ vừa được xử lý</span></div>
+      </div>
+      <div class="ledger-stamp">VAS<span>READY</span></div>
     </div>
   </div>
-  <div class="hero-phone" data-gsap="slide-left" data-delay=".2">
-    <div class="phone-wrap">
-      <div class="phone-outer"><div class="phone-screen">
-        <div class="phone-notch"></div>
-        <div class="phone-header">📊 Tổng quan tháng 5</div>
-        <div class="phone-stats">
-          <div class="pstat up"><strong>+28%</strong>Doanh thu</div>
-          <div class="pstat"><strong>₫2.4M</strong>Tháng này</div>
-          <div class="pstat"><strong>348</strong>Hóa đơn</div>
-          <div class="pstat up"><strong>+12%</strong>Lợi nhuận</div>
-        </div>
-        <div class="phone-chart">
-          <div class="bar bar-pink"   style="--h:42px"></div>
-          <div class="bar bar-purple" style="--h:58px"></div>
-          <div class="bar bar-pink2"  style="--h:35px"></div>
-          <div class="bar bar-pink"   style="--h:52px"></div>
-          <div class="bar bar-purple" style="--h:66px"></div>
-          <div class="bar bar-pink2"  style="--h:46px"></div>
-        </div>
-      </div></div>
-      <div class="float-badge badge-1">✅ Đã hạch toán tự động</div>
-      <div class="float-badge badge-2">📈 Lợi nhuận +28%</div>
-    </div>
-  </div>
-  <div class="hero-ray"></div>
 </section>
 
-<!-- MARQUEE injected by JS -->
 <div id="marquee-slot"></div>
 
-<!-- ABOUT -->
-<section class="section-pad" id="ve-chung-toi" style="background:var(--white)">
-  <div class="section-head" data-gsap="fade-up">
-    <div class="section-label">Giới thiệu</div>
-    <h2 class="section-title">Phần mềm kế toán online KeToan</h2>
-    <p class="section-sub">Đáp ứng đầy đủ nghiệp vụ kế toán doanh nghiệp, hộ kinh doanh, kế toán dịch vụ theo TT99, T133, TT152.</p>
-  </div>
-  <div class="about-grid">
-    <div class="about-card">
-      <div class="card-icon">🧾</div>
-      <h3>Kế toán doanh nghiệp</h3>
-      <p>Xử lý toàn bộ nghiệp vụ kế toán theo chuẩn mực Việt Nam. Phù hợp doanh nghiệp vừa và lớn theo TT133, TT200.</p>
+<section class="section-pad about-section" id="ve-chung-toi">
+  <div class="content-container">
+    <div class="section-head" data-gsap="fade-up">
+      <div class="section-label">Một nền tảng, một luồng dữ liệu</div>
+      <h2 class="section-title">Quản lý kế toán theo cách dễ kiểm soát hơn</h2>
+      <p class="section-sub">Từ chứng từ đầu vào đến báo cáo cuối kỳ, dữ liệu được liên kết xuyên suốt để hạn chế nhập lại và giảm sai lệch.</p>
     </div>
-    <div class="about-card">
-      <div class="card-icon">🏪</div>
-      <h3>Hộ kinh doanh</h3>
-      <p>Giải pháp đơn giản dành cho hộ kinh doanh cá thể. Quản lý doanh thu, chi phí, hàng tồn kho dễ dàng.</p>
-    </div>
-    <div class="about-card">
-      <div class="card-icon">⚡</div>
-      <h3>Tự động hóa cao</h3>
-      <p>Tự động nhập liệu từ hóa đơn điện tử, ngân hàng, bán hàng. Tiết kiệm đến 90% thời gian thủ công.</p>
-    </div>
-  </div>
-</section>
-
-<!-- STATS -->
-<div class="stats-band">
-  <div class="stat-item" data-gsap="fade-up"><span class="stat-num" data-count="50000">0</span><div class="stat-unit">+</div><div class="stat-label">Doanh nghiệp tin dùng</div></div>
-  <div class="stat-item" data-gsap="fade-up" data-delay=".1"><span class="stat-num" data-count="10">0</span><div class="stat-unit">năm</div><div class="stat-label">Kinh nghiệm phát triển</div></div>
-  <div class="stat-item" data-gsap="fade-up" data-delay=".2"><span class="stat-num" data-count="99">0</span><div class="stat-unit">%</div><div class="stat-label">Uptime đảm bảo</div></div>
-  <div class="stat-item" data-gsap="fade-up" data-delay=".3"><span class="stat-num" data-count="24">0</span><div class="stat-unit">/7</div><div class="stat-label">Hỗ trợ kỹ thuật</div></div>
-</div>
-
-<!-- FEATURES -->
-<section class="section-pad" id="tinh-nang" style="background:var(--gray-soft)">
-  <div class="section-head" data-gsap="fade-up">
-    <div class="section-label">Tính năng</div>
-    <h2 class="section-title">Đầy đủ nghiệp vụ kế toán</h2>
-    <p class="section-sub">Tất cả tính năng trong một nền tảng. <a href="tinh-nang.html" style="color:var(--pink);font-weight:700;">Xem tất cả →</a></p>
-  </div>
-  <div class="features-grid">
-    <a href="tinh-nang/ke-toan-tong-hop.html" class="feat-card"><div class="feat-num">01</div><div><h3>Kế toán tổng hợp</h3><p>Xử lý toàn bộ chứng từ, sổ sách và báo cáo theo chuẩn VAS. Tự động bút toán kết chuyển cuối kỳ.</p></div></a>
-    <a href="tinh-nang/hoa-don-dien-tu.html"  class="feat-card"><div class="feat-num">02</div><div><h3>Hoá đơn điện tử</h3><p>Phát hành, tra cứu, đồng bộ hóa đơn điện tử trực tiếp với Tổng cục Thuế. Không cần phần mềm khác.</p></div></a>
-    <a href="tinh-nang/ket-noi-ngan-hang.html" class="feat-card"><div class="feat-num">03</div><div><h3>Kết nối ngân hàng</h3><p>Tự động nhận sao kê, đối chiếu và hạch toán. Hỗ trợ hơn 40 ngân hàng tại Việt Nam.</p></div></a>
-    <a href="tinh-nang/quan-ly-thue.html"      class="feat-card"><div class="feat-num">04</div><div><h3>Quản lý thuế</h3><p>Lập tờ khai VAT, thuế TNDN tự động. Nhắc lịch nộp thuế, kết xuất file XML nộp thuế điện tử.</p></div></a>
-    <a href="tinh-nang/quan-ly-kho.html"       class="feat-card"><div class="feat-num">05</div><div><h3>Quản lý kho</h3><p>Theo dõi nhập - xuất - tồn kho thời gian thực. Cảnh báo hàng tồn thấp, hàng sắp hết hạn.</p></div></a>
-    <a href="tinh-nang/bao-cao-tai-chinh.html" class="feat-card"><div class="feat-num">06</div><div><h3>Báo cáo tài chính</h3><p>Dashboard trực quan, báo cáo lãi lỗ, bảng cân đối, dòng tiền. Xuất Excel, PDF một chạm.</p></div></a>
-  </div>
-</section>
-
-<!-- PRICING -->
-<section class="section-pad" id="bang-gia" style="background:var(--white)">
-  <div class="section-head" data-gsap="fade-up">
-    <div class="section-label">Bảng giá</div>
-    <h2 class="section-title">Chọn gói phù hợp</h2>
-    <p class="section-sub">Dùng thử miễn phí 30 ngày, không cần thẻ tín dụng.</p>
-  </div>
-  <div class="pricing-cards">
-    <div class="price-card">
-      <div class="price-plan">Cơ Bản</div>
-      <div class="price-amount">Miễn phí</div>
-      <div class="price-unit">mãi mãi</div>
-      <ul class="price-features">
-        <li><span class="chk">✓</span>1 người dùng</li>
-        <li><span class="chk">✓</span>100 hóa đơn/tháng</li>
-        <li><span class="chk">✓</span>Báo cáo cơ bản</li>
-        <li><span class="chk">✓</span>Hỗ trợ email</li>
-      </ul>
-      <button class="btn-plan">Dùng miễn phí</button>
-    </div>
-    <div class="price-card featured">
-      <div class="badge-popular">PHỔ BIẾN</div>
-      <div class="price-plan">Doanh Nghiệp</div>
-      <div class="price-amount">490K</div>
-      <div class="price-unit">/ tháng / công ty</div>
-      <ul class="price-features">
-        <li><span class="chk">✓</span>5 người dùng</li>
-        <li><span class="chk">✓</span>Không giới hạn hóa đơn</li>
-        <li><span class="chk">✓</span>Kết nối ngân hàng</li>
-        <li><span class="chk">✓</span>Hóa đơn điện tử</li>
-        <li><span class="chk">✓</span>Hỗ trợ 24/7</li>
-      </ul>
-      <button class="btn-plan">Dùng thử miễn phí</button>
-    </div>
-    <div class="price-card">
-      <div class="price-plan">Dịch Vụ Kế Toán</div>
-      <div class="price-amount">990K</div>
-      <div class="price-unit">/ tháng / văn phòng</div>
-      <ul class="price-features">
-        <li><span class="chk">✓</span>Không giới hạn user</li>
-        <li><span class="chk">✓</span>Quản lý nhiều công ty</li>
-        <li><span class="chk">✓</span>API tích hợp</li>
-        <li><span class="chk">✓</span>Báo cáo tùy chỉnh</li>
-        <li><span class="chk">✓</span>Tư vấn kế toán riêng</li>
-      </ul>
-      <button class="btn-plan">Tư vấn ngay</button>
+    <div class="about-grid">
+      <article class="about-card">
+        <div class="card-icon"><i class="fa-solid fa-diagram-project" aria-hidden="true"></i></div>
+        <h3>Dữ liệu liên thông</h3>
+        <p>Hóa đơn, ngân hàng, kho và sổ cái dùng chung một nguồn dữ liệu, không cần nhập lại nhiều lần.</p>
+      </article>
+      <article class="about-card">
+        <div class="card-icon"><i class="fa-solid fa-file-lines" aria-hidden="true"></i></div>
+        <h3>Giảm thao tác thủ công</h3>
+        <p>Tự động nhận diện chứng từ, đề xuất hạch toán và hỗ trợ đối chiếu theo từng nghiệp vụ.</p>
+      </article>
+      <article class="about-card">
+        <div class="card-icon"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i></div>
+        <h3>Kiểm soát rõ ràng</h3>
+        <p>Phân quyền, lịch sử thao tác và trạng thái phê duyệt giúp doanh nghiệp theo dõi số liệu minh bạch.</p>
+      </article>
     </div>
   </div>
 </section>
 
-<!-- ── VIDEO DEMO ── -->
-<section class="section-pad" style="background:var(--white)">
-  <div class="demo-section-wrap">
-    <!-- Video block -->
-    <div class="demo-video-block" data-gsap="fade-up">
-      <div class="demo-video-inner" id="videoBox">
-        <div class="demo-video-bg"></div>
-        <div class="demo-play-btn" id="playBtn">
-          <div class="demo-play-icon"></div>
-        </div>
-        <div class="demo-play-label">Xem video giới thiệu</div>
-        <!-- pulse rings -->
-        <div class="pulse-ring r1"></div>
-        <div class="pulse-ring r2"></div>
+<section class="stats-band" aria-label="Thông số sản phẩm">
+  <div class="stats-inner">
+    <div class="stat-item" data-gsap="fade-up">
+      <span class="stat-num" data-count="12">0</span><div class="stat-unit">phân hệ</div><div class="stat-label">Nghiệp vụ kế toán liên thông</div>
+    </div>
+    <div class="stat-item" data-gsap="fade-up" data-delay=".08">
+      <span class="stat-num" data-count="40">0</span><div class="stat-unit">+</div><div class="stat-label">Ngân hàng có thể kết nối</div>
+    </div>
+    <div class="stat-item" data-gsap="fade-up" data-delay=".16">
+      <span class="stat-num" data-count="90">0</span><div class="stat-unit">%</div><div class="stat-label">Giảm thao tác nhập liệu lặp lại</div>
+    </div>
+    <div class="stat-item" data-gsap="fade-up" data-delay=".24">
+      <span class="stat-num" data-count="24">0</span><div class="stat-unit">/7</div><div class="stat-label">Làm việc trên nền tảng cloud</div>
+    </div>
+  </div>
+</section>
+
+<section class="section-pad features-section" id="tinh-nang">
+  <div class="content-container">
+    <div class="section-head section-head-split" data-gsap="fade-up">
+      <div>
+        <div class="section-label">Tính năng</div>
+        <h2 class="section-title">Đầy đủ nghiệp vụ kế toán</h2>
       </div>
-      <!-- iframe hidden until play -->
-      <iframe id="demoIframe" style="display:none;width:100%;height:360px;border:none;border-radius:20px;"
-        src="" allowfullscreen title="KeToan Demo Video"></iframe>
+      <p class="section-sub">Mỗi phân hệ xử lý một nghiệp vụ riêng nhưng dùng chung dữ liệu. <a href="tinh-nang.html">Xem tất cả tính năng <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a></p>
+    </div>
+    <div class="features-grid">
+      <a href="tinh-nang/ke-toan-tong-hop.html" class="feat-card"><div class="feat-num">01</div><div><h3>Kế toán tổng hợp</h3><p>Chứng từ, sổ sách, bút toán kết chuyển và báo cáo theo chuẩn kế toán Việt Nam.</p><span class="card-link">Xem chi tiết <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span></div></a>
+      <a href="tinh-nang/hoa-don-dien-tu.html" class="feat-card"><div class="feat-num">02</div><div><h3>Hoá đơn điện tử</h3><p>Đồng bộ hóa đơn đầu vào, phát hành hóa đơn đầu ra và kiểm tra trạng thái xử lý.</p><span class="card-link">Xem chi tiết <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span></div></a>
+      <a href="tinh-nang/ket-noi-ngan-hang.html" class="feat-card"><div class="feat-num">03</div><div><h3>Kết nối ngân hàng</h3><p>Nhận sao kê, gợi ý đối chiếu và hạch toán giao dịch theo nội dung phát sinh.</p><span class="card-link">Xem chi tiết <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span></div></a>
+      <a href="tinh-nang/quan-ly-thue.html" class="feat-card"><div class="feat-num">04</div><div><h3>Quản lý thuế</h3><p>Tổng hợp dữ liệu kê khai, nhắc lịch và kết xuất biểu mẫu phục vụ nộp thuế.</p><span class="card-link">Xem chi tiết <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span></div></a>
+      <a href="tinh-nang/quan-ly-kho.html" class="feat-card"><div class="feat-num">05</div><div><h3>Quản lý kho</h3><p>Theo dõi nhập, xuất, tồn theo thời gian thực và liên kết trực tiếp với kế toán.</p><span class="card-link">Xem chi tiết <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span></div></a>
+      <a href="tinh-nang/bao-cao-tai-chinh.html" class="feat-card"><div class="feat-num">06</div><div><h3>Báo cáo tài chính</h3><p>Theo dõi lãi lỗ, bảng cân đối và dòng tiền từ cùng một nguồn dữ liệu.</p><span class="card-link">Xem chi tiết <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span></div></a>
+    </div>
+  </div>
+</section>
+
+<!-- BẢNG GIÁ TẠM ẨN. Bỏ comment phần này khi cần bật lại.
+<section class="section-pad" id="bang-gia">
+  ... nội dung bảng giá được tạm ẩn theo yêu cầu ...
+</section>
+-->
+
+<section class="section-pad demo-section">
+  <div class="content-container demo-section-wrap">
+    <div class="demo-video-block" data-gsap="fade-up">
+      <button type="button" class="demo-video-inner" id="videoBox" aria-label="Xem video giới thiệu KeToan Cloud">
+        <div class="demo-window-bar"><span></span><span></span><span></span><b>KeToan Cloud / Tổng quan</b></div>
+        <div class="demo-dashboard">
+          <div class="demo-sidebar">
+            <span class="active"></span><span></span><span></span><span></span><span></span>
+          </div>
+          <div class="demo-main">
+            <div class="demo-title-row"><span></span><b></b></div>
+            <div class="demo-kpis"><i></i><i></i><i></i></div>
+            <div class="demo-chart-card"><svg viewBox="0 0 360 100"><path d="M0 78 C55 82 72 48 120 59 C168 70 186 28 228 43 C276 60 295 21 360 16"></path></svg></div>
+          </div>
+        </div>
+        <span class="demo-play-btn"><i class="fa-solid fa-play" aria-hidden="true"></i></span>
+        <span class="demo-play-label">Xem video giới thiệu</span>
+      </button>
+      <iframe id="demoIframe" class="demo-iframe" src="" allow="autoplay; encrypted-media" allowfullscreen title="Video giới thiệu KeToan Cloud"></iframe>
     </div>
 
-    <!-- Text block -->
     <div class="demo-text-block">
       <div class="section-label" data-gsap="fade-up">Video hướng dẫn</div>
-      <h2 class="section-title" data-gsap="fade-up" data-delay=".06">Xem KeToan hoạt động<br>như thế nào</h2>
-      <p class="section-sub" data-gsap="fade-up" data-delay=".12">Chỉ 5 phút để hiểu cách KeToan giúp tiết kiệm hàng giờ làm kế toán mỗi ngày.</p>
-
+      <h2 class="section-title" data-gsap="fade-up" data-delay=".06">Xem KeToan hoạt động như thế nào</h2>
+      <p class="section-sub" data-gsap="fade-up" data-delay=".12">Một vòng quy trình ngắn từ khi nhận dữ liệu đến khi kiểm tra báo cáo.</p>
       <ul class="demo-feature-list">
-        <li data-gsap="fade-up" data-delay=".18">
-          <div class="demo-feat-icon" style="background:var(--pink-pale);">⚡</div>
-          <div>
-            <strong>Nhập liệu tự động</strong>
-            <span>Không cần gõ tay. Kết nối nguồn dữ liệu, mọi thứ tự nhập.</span>
-          </div>
-        </li>
-        <li data-gsap="fade-up" data-delay=".24">
-          <div class="demo-feat-icon" style="background:#EEF2FF;">📊</div>
-          <div>
-            <strong>Báo cáo thông minh</strong>
-            <span>Dashboard trực quan, biểu đồ rõ ràng giúp ra quyết định nhanh.</span>
-          </div>
-        </li>
-        <li data-gsap="fade-up" data-delay=".30">
-          <div class="demo-feat-icon" style="background:#ECFDF5;">✅</div>
-          <div>
-            <strong>Tuân thủ pháp luật</strong>
-            <span>Luôn cập nhật theo thông tư mới nhất của Bộ Tài chính.</span>
-          </div>
-        </li>
+        <li data-gsap="fade-up" data-delay=".18"><div class="demo-feat-icon"><i class="fa-solid fa-file-lines" aria-hidden="true"></i></div><div><strong>Nhập liệu tự động</strong><span>Nhận dữ liệu từ hóa đơn, ngân hàng và các phân hệ liên quan.</span></div></li>
+        <li data-gsap="fade-up" data-delay=".24"><div class="demo-feat-icon"><i class="fa-solid fa-chart-line" aria-hidden="true"></i></div><div><strong>Báo cáo dễ theo dõi</strong><span>Số liệu được tổng hợp theo thời gian thực và có thể truy ngược chứng từ.</span></div></li>
+        <li data-gsap="fade-up" data-delay=".30"><div class="demo-feat-icon"><i class="fa-solid fa-circle-check" aria-hidden="true"></i></div><div><strong>Quy trình có kiểm soát</strong><span>Phân quyền thao tác, phê duyệt và lưu lịch sử thay đổi.</span></div></li>
       </ul>
     </div>
   </div>
 </section>
 
-<!-- ── REGISTRATION FORM ── -->
 <section class="reg-section" id="dang-ky">
-  <!-- bg overlay -->
-  <div class="reg-bg-overlay"></div>
-
+  <div class="reg-decoration reg-decoration-a"></div>
+  <div class="reg-decoration reg-decoration-b"></div>
   <div class="reg-wrap">
-    <!-- Left: benefits -->
     <div class="reg-left" data-gsap="fade-up">
-      <h2 class="reg-title">ĐĂNG KÝ NHẬN TƯ VẤN VÀ<br>DÙNG THỬ MIỄN PHÍ</h2>
+      <div class="reg-kicker">Thiết lập theo nhu cầu doanh nghiệp</div>
+      <h2 class="reg-title">Đăng ký dùng thử<br>phần mềm kế toán</h2>
+      <p class="reg-intro">Đội ngũ KeToan sẽ trao đổi về mô hình vận hành, số lượng người dùng và các phân hệ cần triển khai.</p>
       <ul class="reg-benefits">
-        <li><span class="reg-check">✓</span>Hơn 3 năm kinh nghiệm đồng hành cùng 500+ doanh nghiệp, hộ kinh doanh</li>
-        <li><span class="reg-check">✓</span>Đáp ứng đầy đủ nghiệp vụ kế toán theo quy định TT99, TT133, TT152</li>
-        <li><span class="reg-check">✓</span>Miễn phí cập nhật nhanh chóng, chính xác các thông tư, nghị định mới nhất</li>
-        <li><span class="reg-check">✓</span>Miễn phí kết nối Thuế điện tử, hóa đơn điện tử, ngân hàng điện tử...</li>
-        <li><span class="reg-check">✓</span>Giá tiết kiệm nhất trên thị trường, chỉ từ 490K/tháng</li>
-        <li><span class="reg-check">✓</span>Không giới hạn người dùng, làm việc online mọi lúc mọi nơi</li>
-        <li><span class="reg-check">✓</span>Tuỳ chỉnh phần mềm theo yêu cầu đặc thù của từng khách hàng</li>
-        <li><span class="reg-check">✓</span>Đội ngũ tư vấn thành thạo nghiệp vụ, hỗ trợ nhanh chóng 24/7</li>
+        <li><span class="reg-check"><i class="fa-solid fa-circle" aria-hidden="true"></i></span>Dữ liệu liên thông từ hóa đơn, ngân hàng, kho đến sổ cái và báo cáo</li>
+        <li><span class="reg-check"><i class="fa-solid fa-circle" aria-hidden="true"></i></span>Đáp ứng các nghiệp vụ kế toán theo TT99, TT133 và TT152</li>
+        <li><span class="reg-check"><i class="fa-solid fa-circle" aria-hidden="true"></i></span>Cập nhật biểu mẫu và quy định phục vụ công việc kế toán</li>
+        <li><span class="reg-check"><i class="fa-solid fa-circle" aria-hidden="true"></i></span>Kết nối Thuế điện tử, hóa đơn điện tử và ngân hàng điện tử</li>
+        <li><span class="reg-check"><i class="fa-solid fa-circle" aria-hidden="true"></i></span>Lựa chọn phân hệ linh hoạt theo quy mô và nhu cầu</li>
+        <li><span class="reg-check"><i class="fa-solid fa-circle" aria-hidden="true"></i></span>Làm việc online, phân quyền người dùng và lưu lịch sử thao tác</li>
       </ul>
     </div>
 
-    <!-- Right: form card -->
     <div class="reg-card" data-gsap="slide-left" data-delay=".1">
-      <h3 class="reg-card-title">ĐĂNG KÝ NHẬN TƯ VẤN VÀ DÙNG THỬ</h3>
-      <div class="reg-gift">🎁 Tặng 100 số hoá đơn đầu vào</div>
-
-      <form class="reg-form" id="regForm" onsubmit="submitForm(event)">
-        <div class="reg-field">
-          <input type="text"  name="name"  placeholder="Họ và tên *" required/>
+      <div class="reg-card-top">
+        <div>
+          <span class="reg-card-kicker">KeToan Cloud</span>
+          <h3 class="reg-card-title">Đăng ký dùng thử</h3>
         </div>
-        <div class="reg-field">
-          <input type="email" name="email" placeholder="Email *" required/>
-        </div>
-        <div class="reg-field">
-          <input type="tel"   name="phone" placeholder="Số điện thoại *" required/>
-        </div>
-        <div class="reg-field">
-          <input type="text"  name="tax"   placeholder="Mã số thuế *"/>
-        </div>
-        <div class="reg-field">
-          <select name="product">
-            <option value="" disabled selected>Chọn sản phẩm quan tâm *</option>
-            <option>Kế toán doanh nghiệp</option>
-            <option>Kế toán hộ kinh doanh</option>
-            <option>Dịch vụ kế toán</option>
-            <option>Hóa đơn điện tử</option>
-          </select>
-        </div>
-        <button type="submit" class="reg-submit">NHẬN TƯ VẤN NGAY</button>
+        <div class="reg-card-icon"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></div>
+      </div>
+      <p class="reg-card-sub">Điền thông tin để nhận tư vấn cấu hình phù hợp.</p>
+      <form class="reg-form" id="regForm">
+        <div class="reg-field"><label>Họ và tên<input type="text" name="name" placeholder="Nguyễn Văn A" required></label></div>
+        <div class="reg-field"><label>Email<input type="email" name="email" placeholder="name@company.vn" required></label></div>
+        <div class="reg-field"><label>Số điện thoại<input type="tel" name="phone" placeholder="09xx xxx xxx" required></label></div>
+        <div class="reg-field"><label>Mã số thuế<input type="text" name="tax" placeholder="Nhập nếu doanh nghiệp đã có"></label></div>
+        <div class="reg-field"><label>Sản phẩm quan tâm<select name="product" required><option value="" disabled selected>Chọn sản phẩm</option><option>Kế toán doanh nghiệp</option><option>Kế toán hộ kinh doanh</option><option>Dịch vụ kế toán</option><option>Hóa đơn điện tử</option></select></label></div>
+        <button type="submit" class="reg-submit">Đăng ký dùng thử <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
       </form>
-
-      <!-- success state (hidden) -->
-      <div class="reg-success" id="regSuccess" style="display:none;">
-        <div class="reg-success-icon">🎉</div>
-        <h4>Đăng ký thành công!</h4>
-        <p>Cảm ơn bạn đã quan tâm đến KeToan.<br>Chúng tôi sẽ liên hệ trong vòng <strong>30 phút</strong>.</p>
+      <div class="reg-success" id="regSuccess" hidden>
+        <div class="reg-success-icon"><i class="fa-solid fa-circle-check" aria-hidden="true"></i></div>
+        <h4>Đã nhận thông tin</h4>
+        <p>Đội ngũ KeToan sẽ liên hệ với bạn trong thời gian sớm nhất.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CTA + FOOTER injected by components.js -->
 <div id="cta-slot"></div>
-
-<style>
-/* ── VIDEO DEMO ── */
-.demo-section-wrap {
-  display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center;
-  max-width: 1200px; margin: 0 auto;
-}
-.demo-video-block { position: relative; min-height: 360px; }
-.demo-video-inner {
-  position: relative; border-radius: 20px; overflow: hidden;
-  background: 
-    linear-gradient(135deg, rgba(26,5,48,.75) 0%, rgba(61,16,87,.7) 50%, rgba(124,26,74,.75) 100%),
-    url('https://img.youtube.com/vi/SlQR9iu09bQ/maxresdefault.jpg') center/cover no-repeat;
-  aspect-ratio: 16/9;
-  display: flex; flex-direction: column; align-items: center; justify-content: center;
-  cursor: pointer;
-  box-shadow: 0 24px 56px rgba(124,63,142,.28);
-  transition: transform .25s, box-shadow .25s;
-}
-.demo-video-inner:hover { transform: scale(1.02); box-shadow: 0 32px 72px rgba(124,63,142,.38); }
-.demo-video-bg {
-  position: absolute; inset: 0;
-  background: radial-gradient(ellipse 60% 50% at 50% 50%, rgba(200,57,106,.25) 0%, transparent 70%);
-}
-.demo-play-btn {
-  width: 80px; height: 80px; border-radius: 50%;
-  background: rgba(255,255,255,.95);
-  display: flex; align-items: center; justify-content: center;
-  position: relative; z-index: 2;
-  box-shadow: 0 8px 32px rgba(0,0,0,.25);
-  transition: transform .2s, box-shadow .2s;
-}
-.demo-video-inner:hover .demo-play-btn { transform: scale(1.1); box-shadow: 0 12px 40px rgba(0,0,0,.35); }
-.demo-play-icon {
-  border-left: 28px solid var(--pink);
-  border-top: 17px solid transparent;
-  border-bottom: 17px solid transparent;
-  margin-left: 7px;
-}
-.demo-play-label {
-  margin-top: 16px; color: rgba(255,255,255,.65);
-  font-size: 13px; font-weight: 600; position: relative; z-index: 2;
-}
-/* pulse rings */
-.pulse-ring {
-  position: absolute; border-radius: 50%;
-  border: 2px solid rgba(255,255,255,.25);
-  animation: demoRing 2.2s ease-out infinite;
-}
-.r1 { width: 110px; height: 110px; animation-delay: 0s; }
-.r2 { width: 150px; height: 150px; animation-delay: .6s; }
-@keyframes demoRing {
-  0%   { transform: scale(.8); opacity: 1; }
-  100% { transform: scale(1.5); opacity: 0; }
-}
-
-/* feature list */
-.demo-feature-list { list-style: none; margin-top: 28px; }
-.demo-feature-list li {
-  display: flex; gap: 14px; align-items: flex-start;
-  padding: 14px 0; border-bottom: 1px solid var(--gray-border);
-}
-.demo-feat-icon {
-  width: 40px; height: 40px; border-radius: 10px; flex-shrink: 0;
-  display: flex; align-items: center; justify-content: center; font-size: 18px;
-}
-.demo-feature-list li strong { display: block; font-size: 15px; font-weight: 800; color: var(--text-dark); margin-bottom: 3px; }
-.demo-feature-list li span  { font-size: 13.5px; color: var(--gray-text); line-height: 1.6; }
-
-/* ── REG SECTION ── */
-.reg-section {
-  position: relative; overflow: hidden;
-  background: var(--pink);
-  padding: 80px 48px;
-}
-.reg-bg-overlay {
-  position: absolute; inset: 0;
-  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
-  pointer-events: none;
-}
-.reg-section::before {
-  content: ''; position: absolute; inset: 0;
-  background: linear-gradient(120deg, rgba(124,63,142,.5) 0%, transparent 60%);
-  pointer-events: none;
-}
-.reg-wrap {
-  position: relative; z-index: 2;
-  display: grid; grid-template-columns: 1fr 480px; gap: 64px; align-items: center;
-  max-width: 1200px; margin: 0 auto;
-}
-.reg-title {
-  font-size: 32px; font-weight: 900; color: #fff; line-height: 1.2; margin-bottom: 32px;
-}
-.reg-benefits { list-style: none; }
-.reg-benefits li {
-  display: flex; gap: 12px; align-items: flex-start;
-  color: rgba(255,255,255,.9); font-size: 14.5px; font-weight: 500;
-  padding: 8px 0; line-height: 1.55;
-}
-.reg-check {
-  width: 22px; height: 22px; border-radius: 50%; flex-shrink: 0;
-  background: rgba(255,255,255,.25); display: flex; align-items: center; justify-content: center;
-  font-size: 12px; font-weight: 900; color: #fff; margin-top: 1px;
-}
-
-/* form card */
-.reg-card {
-  background: #fff; border-radius: 20px;
-  padding: 36px 32px;
-  box-shadow: 0 24px 64px rgba(0,0,0,.2);
-}
-.reg-card-title {
-  font-size: 14px; font-weight: 800; color: var(--text-dark);
-  text-align: center; letter-spacing: .5px; margin-bottom: 10px;
-}
-.reg-gift {
-  text-align: center; color: var(--pink); font-size: 14px; font-weight: 700;
-  margin-bottom: 24px;
-}
-.reg-form { display: flex; flex-direction: column; gap: 12px; }
-.reg-field input,
-.reg-field select {
-  width: 100%; padding: 13px 16px;
-  border: 1.5px solid var(--gray-border); border-radius: 10px;
-  font-size: 14px; font-family: inherit; color: var(--text-dark);
-  outline: none; background: #fff;
-  transition: border-color .2s, box-shadow .2s;
-}
-.reg-field input:focus,
-.reg-field select:focus {
-  border-color: var(--pink);
-  box-shadow: 0 0 0 3px rgba(200,57,106,.1);
-}
-.reg-field input::placeholder { color: #aaa; }
-.reg-field select { color: #aaa; cursor: pointer; }
-.reg-field select:valid { color: var(--text-dark); }
-.reg-submit {
-  width: 100%; padding: 15px;
-  background: var(--grad-brand); color: #fff;
-  border: none; border-radius: 10px;
-  font-size: 15px; font-weight: 800; font-family: inherit;
-  cursor: pointer; letter-spacing: .5px;
-  box-shadow: 0 6px 20px rgba(200,57,106,.4);
-  transition: transform .2s, box-shadow .2s;
-  margin-top: 4px;
-}
-.reg-submit:hover { transform: translateY(-2px); box-shadow: 0 10px 28px rgba(200,57,106,.5); }
-.reg-submit:active { transform: translateY(0); }
-
-/* success state */
-.reg-success {
-  text-align: center; padding: 32px 16px;
-}
-.reg-success-icon { font-size: 56px; margin-bottom: 16px; }
-.reg-success h4 { font-size: 20px; font-weight: 900; color: var(--text-dark); margin-bottom: 10px; }
-.reg-success p  { font-size: 14.5px; color: var(--gray-text); line-height: 1.7; }
-
-@media (max-width: 900px) {
-  .demo-section-wrap { grid-template-columns: 1fr; gap: 36px; }
-  .reg-wrap { grid-template-columns: 1fr; }
-  .reg-section { padding: 56px 24px; }
-  .reg-title { font-size: 24px; }
-  .reg-card { padding: 28px 20px; }
-}
-</style>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script src="components.js"></script>
 <script>
   renderNavbar("home");
-  renderSocialFloat();
-  const mq = renderMarquee();
-  document.getElementById("marquee-slot").replaceWith(mq);
-  const cta = renderCTABand();
-  document.getElementById("cta-slot").replaceWith(cta);
+  document.getElementById("marquee-slot").replaceWith(renderMarquee());
+  document.getElementById("cta-slot").replaceWith(renderCTABand());
   renderFooter();
+  refreshIcons();
 </script>
 <script src="main.js"></script>
 <script>
-/* ── VIDEO PLAY ── */
-document.getElementById("videoBox").addEventListener("click", function() {
-  const iframe = document.getElementById("demoIframe");
-  // Thay YOUR_VIDEO_ID bằng ID video YouTube thật của bạn
-  iframe.src = "https://www.youtube.com/embed/SlQR9iu09bQ?autoplay=1";
-  this.style.display = "none";
-  iframe.style.display = "block";
-  gsap.fromTo(iframe, {opacity:0}, {opacity:1, duration:.4});
-});
-
-/* ── FORM SUBMIT ── */
-function submitForm(e) {
-  e.preventDefault();
-  const btn = e.target.querySelector(".reg-submit");
-  const d   = Object.fromEntries(new FormData(e.target));
-
-  btn.textContent = "Đang gửi...";
-  btn.disabled    = true;
-
-  emailjs.send(
-    "SERVICE_ID",
-    "TEMPLATE_ID",
-    {
-      to_email : "phihasky@gmail.com",
-      from_name: d.name,
-      email    : d.email,
-      phone    : d.phone,
-      tax      : d.tax    || "N/A",
-      product  : d.product|| "N/A",
-    }
-  )
-  .then(() => {
-    e.target.style.display = "none";
-    const s = document.getElementById("regSuccess");
-    s.style.display = "block";
-    gsap.fromTo(s, {opacity:0,y:20}, {opacity:1,y:0,duration:.5});
-  })
-  .catch(err => {
-    btn.textContent = "NHẬN TƯ VẤN NGAY";
-    btn.disabled    = false;
-    alert("Gửi thất bại!\n" + JSON.stringify(err));
+  document.getElementById("videoBox").addEventListener("click", function () {
+    const iframe = document.getElementById("demoIframe");
+    iframe.src = "https://www.youtube.com/embed/SlQR9iu09bQ?autoplay=1";
+    this.hidden = true;
+    iframe.classList.add("show");
   });
-}
+
+  document.getElementById("regForm").addEventListener("submit", function (event) {
+    event.preventDefault();
+    submitLeadForm(this, document.getElementById("regSuccess"));
+  });
 </script>
 </body>
 </html>

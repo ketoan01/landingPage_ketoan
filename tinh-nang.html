@@ -7,6 +7,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="theme-v5.css"/>
+  <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
 </head>
 <body>
 
@@ -27,12 +29,12 @@
     <!-- SIDEBAR -->
     <aside class="tn-sidebar">
       <h4>Danh mục</h4>
-      <a href="#ke-toan" class="active">📚 Kế toán</a>
-      <a href="#hoa-don">🧾 Hoá đơn & Thuế</a>
-      <a href="#ngan-hang">🏦 Ngân hàng</a>
-      <a href="#kho">📦 Kho & Hàng hoá</a>
-      <a href="#nhan-su">👥 Nhân sự & Lương</a>
-      <a href="#bao-cao">📊 Báo cáo</a>
+      <a href="#ke-toan" class="active"><i class="fa-solid fa-book-open" aria-hidden="true"></i> Kế toán</a>
+      <a href="#hoa-don"><i class="fa-solid fa-receipt" aria-hidden="true"></i> Hoá đơn & Thuế</a>
+      <a href="#ngan-hang"><i class="fa-solid fa-building-columns" aria-hidden="true"></i> Ngân hàng</a>
+      <a href="#kho"><i class="fa-solid fa-box" aria-hidden="true"></i> Kho & Hàng hoá</a>
+      <a href="#nhan-su"><i class="fa-solid fa-users" aria-hidden="true"></i> Nhân sự & Lương</a>
+      <a href="#bao-cao"><i class="fa-solid fa-chart-line" aria-hidden="true"></i> Báo cáo</a>
     </aside>
 
     <!-- GRID -->
@@ -41,32 +43,32 @@
       <!-- KẾ TOÁN -->
       <div id="ke-toan" style="margin-bottom:48px">
         <h2 style="font-size:20px;font-weight:900;margin-bottom:20px;padding-bottom:12px;border-bottom:2px solid var(--gray-border);display:flex;align-items:center;gap:10px;">
-          <span style="width:32px;height:32px;background:var(--grad-brand);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px;">📚</span> Kế toán
+          <span class="section-heading-icon"><i class="fa-solid fa-book-open" aria-hidden="true"></i></span> Kế toán
         </h2>
         <div class="tn-grid">
           <a href="tinh-nang/ke-toan-tong-hop.html" class="tn-card">
-            <div class="tn-card-icon">🗂️</div>
+            <div class="tn-card-icon"><i class="fa-solid fa-book-open" aria-hidden="true"></i></div>
             <h3>Kế toán tổng hợp</h3>
             <p>Xử lý toàn bộ chứng từ, sổ sách theo chuẩn VAS. Tự động bút toán kết chuyển cuối kỳ.</p>
-            <div class="tn-card-arrow">→</div>
+            <div class="tn-card-arrow"><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></div>
           </a>
           <a href="tinh-nang/ke-toan-mua-hang.html" class="tn-card">
-            <div class="tn-card-icon">🛒</div>
+            <div class="tn-card-icon"><i class="fa-solid fa-cart-shopping" aria-hidden="true"></i></div>
             <h3>Kế toán mua hàng</h3>
             <p>Quản lý đơn mua, phiếu nhập kho, công nợ phải trả. Tích hợp thanh toán ngân hàng.</p>
-            <div class="tn-card-arrow">→</div>
+            <div class="tn-card-arrow"><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></div>
           </a>
           <a href="tinh-nang/ke-toan-tien-luong.html" class="tn-card">
-            <div class="tn-card-icon">💰</div>
+            <div class="tn-card-icon"><i class="fa-solid fa-money-check-dollar" aria-hidden="true"></i></div>
             <h3>Kế toán tiền lương</h3>
             <p>Tính lương tự động, quản lý BHXH, BHYT, thuế TNCN. Xuất bảng lương PDF, chuyển khoản hàng loạt.</p>
-            <div class="tn-card-arrow">→</div>
+            <div class="tn-card-arrow"><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></div>
           </a>
           <a href="tinh-nang/tai-san-co-dinh.html" class="tn-card">
-            <div class="tn-card-icon">🏢</div>
+            <div class="tn-card-icon"><i class="fa-solid fa-building" aria-hidden="true"></i></div>
             <h3>Tài sản cố định</h3>
             <p>Theo dõi toàn bộ vòng đời tài sản: mua, khấu hao, thanh lý. Cảnh báo khấu hao hết.</p>
-            <div class="tn-card-arrow">→</div>
+            <div class="tn-card-arrow"><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></div>
           </a>
         </div>
       </div>
@@ -74,20 +76,20 @@
       <!-- HOÁ ĐƠN & THUẾ -->
       <div id="hoa-don" style="margin-bottom:48px">
         <h2 style="font-size:20px;font-weight:900;margin-bottom:20px;padding-bottom:12px;border-bottom:2px solid var(--gray-border);display:flex;align-items:center;gap:10px;">
-          <span style="width:32px;height:32px;background:var(--grad-brand);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px;">🧾</span> Hoá đơn & Thuế
+          <span class="section-heading-icon"><i class="fa-solid fa-receipt" aria-hidden="true"></i></span> Hoá đơn & Thuế
         </h2>
         <div class="tn-grid">
           <a href="tinh-nang/hoa-don-dien-tu.html" class="tn-card">
-            <div class="tn-card-icon">📄</div>
+            <div class="tn-card-icon"><i class="fa-solid fa-file-lines" aria-hidden="true"></i></div>
             <h3>Hoá đơn điện tử</h3>
             <p>Phát hành, tra cứu, đồng bộ với Tổng cục Thuế. Hỗ trợ Viettel, VNPT, MISA, FPT...</p>
-            <div class="tn-card-arrow">→</div>
+            <div class="tn-card-arrow"><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></div>
           </a>
           <a href="tinh-nang/quan-ly-thue.html" class="tn-card">
-            <div class="tn-card-icon">📋</div>
+            <div class="tn-card-icon"><i class="fa-solid fa-clipboard-list" aria-hidden="true"></i></div>
             <h3>Quản lý thuế</h3>
             <p>Lập tờ khai VAT, thuế TNDN tự động. Kết xuất XML nộp thuế điện tử, nhắc lịch nộp.</p>
-            <div class="tn-card-arrow">→</div>
+            <div class="tn-card-arrow"><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></div>
           </a>
         </div>
       </div>
@@ -95,14 +97,14 @@
       <!-- NGÂN HÀNG -->
       <div id="ngan-hang" style="margin-bottom:48px">
         <h2 style="font-size:20px;font-weight:900;margin-bottom:20px;padding-bottom:12px;border-bottom:2px solid var(--gray-border);display:flex;align-items:center;gap:10px;">
-          <span style="width:32px;height:32px;background:var(--grad-brand);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px;">🏦</span> Ngân hàng
+          <span class="section-heading-icon"><i class="fa-solid fa-building-columns" aria-hidden="true"></i></span> Ngân hàng
         </h2>
         <div class="tn-grid">
           <a href="tinh-nang/ket-noi-ngan-hang.html" class="tn-card">
-            <div class="tn-card-icon">🔗</div>
+            <div class="tn-card-icon"><i class="fa-solid fa-link" aria-hidden="true"></i></div>
             <h3>Kết nối ngân hàng</h3>
             <p>Tự động nhận sao kê 40+ ngân hàng. Đối chiếu và hạch toán tự động, không cần nhập tay.</p>
-            <div class="tn-card-arrow">→</div>
+            <div class="tn-card-arrow"><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></div>
           </a>
         </div>
       </div>
@@ -110,14 +112,14 @@
       <!-- KHO -->
       <div id="kho" style="margin-bottom:48px">
         <h2 style="font-size:20px;font-weight:900;margin-bottom:20px;padding-bottom:12px;border-bottom:2px solid var(--gray-border);display:flex;align-items:center;gap:10px;">
-          <span style="width:32px;height:32px;background:var(--grad-brand);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px;">📦</span> Kho & Hàng hoá
+          <span class="section-heading-icon"><i class="fa-solid fa-box" aria-hidden="true"></i></span> Kho & Hàng hoá
         </h2>
         <div class="tn-grid">
           <a href="tinh-nang/quan-ly-kho.html" class="tn-card">
-            <div class="tn-card-icon">📦</div>
+            <div class="tn-card-icon"><i class="fa-solid fa-box" aria-hidden="true"></i></div>
             <h3>Quản lý kho</h3>
             <p>Theo dõi nhập - xuất - tồn kho thời gian thực. Cảnh báo hàng tồn thấp, hàng sắp hết hạn.</p>
-            <div class="tn-card-arrow">→</div>
+            <div class="tn-card-arrow"><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></div>
           </a>
         </div>
       </div>
@@ -125,14 +127,14 @@
       <!-- BÁO CÁO -->
       <div id="bao-cao" style="margin-bottom:48px">
         <h2 style="font-size:20px;font-weight:900;margin-bottom:20px;padding-bottom:12px;border-bottom:2px solid var(--gray-border);display:flex;align-items:center;gap:10px;">
-          <span style="width:32px;height:32px;background:var(--grad-brand);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px;">📊</span> Báo cáo
+          <span class="section-heading-icon"><i class="fa-solid fa-chart-line" aria-hidden="true"></i></span> Báo cáo
         </h2>
         <div class="tn-grid">
           <a href="tinh-nang/bao-cao-tai-chinh.html" class="tn-card">
-            <div class="tn-card-icon">📈</div>
+            <div class="tn-card-icon"><i class="fa-solid fa-chart-line" aria-hidden="true"></i></div>
             <h3>Báo cáo tài chính</h3>
             <p>Dashboard trực quan. Báo cáo lãi lỗ, bảng cân đối kế toán, dòng tiền. Xuất Excel/PDF.</p>
-            <div class="tn-card-arrow">→</div>
+            <div class="tn-card-arrow"><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></div>
           </a>
         </div>
       </div>
@@ -153,6 +155,7 @@
   const cta = renderCTABand();
   document.getElementById("cta-slot").replaceWith(cta);
   renderFooter();
+  refreshIcons();
 
   // sidebar active link on scroll
   const sections = document.querySelectorAll("[id]");
