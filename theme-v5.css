@@ -735,3 +735,107 @@ i.fa-brands { display: inline-block; line-height: 1; }
   background: rgba(255,255,255,.1);
   color: #fff !important;
 }
+/* 1) Tin tức: tăng tương phản nền/chữ */
+.news-hero-bg {
+  background:
+    radial-gradient(
+      circle at 72% 55%,
+      rgba(223, 92, 150, 0.24),
+      transparent 34%
+    ),
+    linear-gradient(
+      135deg,
+      #151a2d 0%,
+      #242038 52%,
+      #702348 100%
+    );
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.news-hero-bg::before {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.035) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      rgba(255, 255, 255, 0.025) 1px,
+      transparent 1px
+    );
+  background-size: 44px 44px;
+  opacity: 0.55;
+}
+
+.news-hero-bg .breadcrumb,
+.news-hero-bg .breadcrumb a {
+  color: rgba(255, 255, 255, 0.68);
+}
+
+.news-hero-bg .breadcrumb a:hover {
+  color: #fff;
+}
+
+.news-hero-bg .section-title {
+  color: #fff !important;
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.16);
+}
+
+.news-hero-bg p {
+  color: rgba(255, 255, 255, 0.76) !important;
+}
+
+.news-hero-bg .search-bar {
+  width: min(380px, 100%);
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.news-hero-bg .search-bar:focus-within {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.58);
+}
+
+.news-hero-bg .search-bar input {
+  color: #fff;
+}
+
+.news-hero-bg .search-bar input::placeholder {
+  color: rgba(255, 255, 255, 0.58);
+}
+
+.news-hero-bg .search-bar button {
+  color: #fff;
+}
+
+
+/* 2) Dropdown: nối vùng hover giữa link và menu */
+.nav-group {
+  position: relative;
+}
+
+.nav-group::after {
+  content: "";
+  position: absolute;
+  z-index: 598;
+  top: 100%;
+  left: -6px;
+  right: -6px;
+  height: 16px;
+}
+
+.mega-wrap,
+.drop-wrap {
+  top: calc(100% + 8px);
+  z-index: 600;
+}
+
+.nav-group:hover .mega-wrap,
+.nav-group:focus-within .mega-wrap,
+.nav-group:hover .drop-wrap,
+.nav-group:focus-within .drop-wrap {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0);
+}
