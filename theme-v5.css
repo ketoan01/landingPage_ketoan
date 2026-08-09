@@ -262,13 +262,13 @@ svg { display: block; }
 }
 .eyebrow-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--pink); box-shadow: 0 0 0 5px var(--pink-pale); }
 .hero-headline {
-  max-width: 700px;
-  margin: 0 0 22px;
+  max-width: 650px;
+  margin: 0 0 20px;
   color: var(--navy);
-  font-size: clamp(44px, 4.8vw, 66px);
+  font-size: clamp(36px, 3.8vw, 52px);
   font-weight: 800;
-  line-height: 1.08;
-  letter-spacing: -.05em;
+  line-height: 1.15;
+  letter-spacing: -.035em;
 }
 .hero-headline span {
   color: var(--pink);
@@ -569,7 +569,7 @@ footer a { color: rgba(255,255,255,.5); }
   .mobile-drawer { top: 64px; }
   .hero { min-height: auto; }
   .hero-inner { min-height: 0; padding-block: 56px 50px; gap: 38px; }
-  .hero-headline { font-size: clamp(40px, 12vw, 56px); }
+  .hero-headline { font-size: clamp(30px, 7.5vw, 42px); }
   .hero-description { font-size: 14px; }
   .hero-capabilities { display: grid; grid-template-columns: 1fr; gap: 10px; }
   .hero-cta { align-items: stretch; }
