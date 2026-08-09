@@ -14,7 +14,7 @@ const CONTACT = {
   telegramHref: "https://t.me/tieu_exe",
   zaloHref: "https://zalo.me/1479234215132012086",
   zaloQr: "assets/zalo-qr.png",
-  loginHref: "https://webapp.letieu8.workers.dev/login"
+  loginHref: "https://app.ketoan.one/login"
 };
 
 const COMPANY = {
