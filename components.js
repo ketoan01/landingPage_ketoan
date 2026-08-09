@@ -316,8 +316,12 @@ async function submitLeadForm(form, successElement) {
       throw new Error(result.description || "Gửi tin nhắn Telegram thất bại");
     }
 
+    form.style.display = "none";
     form.hidden = true;
+    successElement.style.display = "block";
     successElement.hidden = false;
+    button.textContent = defaultText;
+    button.disabled = false;
     refreshIcons();
   } catch (error) {
     console.error("Form submit error:", error);

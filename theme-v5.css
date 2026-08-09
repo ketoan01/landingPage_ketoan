@@ -40,7 +40,8 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
 }
-button, input, select, textarea { font: inherit; }
+ button, input, select, textarea { font: inherit; }
+ [hidden] { display: none !important; }
 svg { display: block; }
 [data-lucide] { width: 18px; height: 18px; stroke-width: 1.8; }
 .content-container,
