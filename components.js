@@ -18,6 +18,14 @@ const TELEGRAM_CONFIG = {
   chatId: "-5382485145"
 };
 const LEAD_API_ENDPOINT = "https://webapp.letieu8.workers.dev/api/lead";
+
+function escapeHtml(str) {
+  if (!str) return "";
+  return String(str)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;");
+}
 function refreshIcons() {}
 
 let emailJSPromise = null;
@@ -283,50 +291,36 @@ async function submitLeadForm(form, successElement) {
   button.textContent = "Đang gửi...";
   button.disabled = true;
 
-  const text = `🔔 *ĐĂNG KÝ DÙNG THỬ MỚI*\n\n` +
-    `👤 *Họ và tên:* ${data.name || "N/A"}\n` +
-    `📧 *Email:* ${data.email || "N/A"}\n` +
-    `📞 *Số điện thoại:* ${data.phone || "N/A"}\n` +
-    `🏢 *Mã số thuế:* ${data.tax || "Chưa cung cấp"}\n` +
-    `📦 *Sản phẩm quan tâm:* ${data.product || "N/A"}\n` +
-    `⏰ *Thời gian:* ${new Date().toLocaleString("vi-VN", { timeZone: "Asia/Ho_Chi_Minh" })}`;
+  const htmlMessage =
+    `<b>🔔 ĐĂNG KÝ DÙNG THỬ MỚI</b>\n\n` +
+    `👤 <b>Họ và tên:</b> ${escapeHtml(data.name) || "N/A"}\n` +
+    `📧 <b>Email:</b> ${escapeHtml(data.email) || "N/A"}\n` +
+    `📞 <b>Số điện thoại:</b> ${escapeHtml(data.phone) || "N/A"}\n` +
+    `🏢 <b>Mã số thuế:</b> ${escapeHtml(data.tax) || "Chưa cung cấp"}\n` +
+    `📦 <b>Sản phẩm quan tâm:</b> ${escapeHtml(data.product) || "N/A"}\n` +
+    `⏰ <b>Thời gian:</b> ${new Date().toLocaleString("vi-VN")}`;
 
   try {
-    let sent = false;
+    const res = await fetch(`https://api.telegram.org/bot${TELEGRAM_CONFIG.botToken}/sendMessage`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        chat_id: TELEGRAM_CONFIG.chatId,
+        text: htmlMessage,
+        parse_mode: "HTML"
+      })
+    });
 
-    // 1. Try Cloudflare Worker Relay
-    try {
-      const res = await fetch(LEAD_API_ENDPOINT, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data)
-      });
-      if (res.ok) sent = true;
-    } catch (err) {
-      console.warn("Worker relay unavailable, falling back to direct Telegram API.");
-    }
-
-    // 2. Direct Telegram Bot API Fallback
-    if (!sent) {
-      const tgRes = await fetch(`https://api.telegram.org/bot${TELEGRAM_CONFIG.botToken}/sendMessage`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          chat_id: TELEGRAM_CONFIG.chatId,
-          text: text,
-          parse_mode: "Markdown"
-        })
-      });
-      if (!tgRes.ok) {
-        throw new Error("Gửi tin nhắn Telegram thất bại");
-      }
+    const result = await res.json();
+    if (!res.ok || !result.ok) {
+      throw new Error(result.description || "Gửi tin nhắn Telegram thất bại");
     }
 
     form.hidden = true;
     successElement.hidden = false;
     refreshIcons();
   } catch (error) {
-    console.error(error);
+    console.error("Form submit error:", error);
     alert("Chưa thể gửi thông tin. Vui lòng thử lại hoặc gọi 0392 405 600.");
     button.textContent = defaultText;
     button.disabled = false;
