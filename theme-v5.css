@@ -294,62 +294,29 @@ svg { display: block; }
 .btn-hero-secondary { min-height: 50px; padding-inline: 22px; }
 .hero-note { display: flex; align-items: center; gap: 8px; color: #7a8192; font-size: 11.5px; }
 .hero-note svg { width: 15px; height: 15px; color: var(--green); }
-.hero-visual { position: relative; min-height: 420px; display: flex; align-items: center; justify-content: center; }
-.hero-app-frame {
+.hero-visual { position: relative; min-height: 470px; display: flex; align-items: center; justify-content: center; }
+.ledger-shadow-card {
+  position: absolute;
+  width: 82%;
+  height: 82%;
+  right: 1%;
+  top: 12%;
+  border-radius: 17px;
+  background: linear-gradient(145deg, #ef6aa3, #9a3b7d);
+  transform: rotate(2.8deg);
+  opacity: .9;
+}
+.ledger-card {
   position: relative;
   z-index: 2;
-  width: 98%;
-  max-width: 660px;
-  border-radius: 14px;
+  width: 92%;
+  max-width: 620px;
   overflow: hidden;
-  background: #ffffff;
-  border: 1px solid rgba(17, 24, 45, .15);
-  box-shadow: 0 24px 60px rgba(17, 24, 45, .16);
-  transition: transform var(--transition), box-shadow var(--transition);
-}
-.hero-app-frame:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 32px 75px rgba(199, 47, 114, .18);
-}
-.hero-app-topbar {
-  height: 34px;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding-inline: 14px;
-  background: #11182d;
-  border-bottom: 1px solid rgba(255, 255, 255, .1);
-}
-.hero-app-dots {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-.hero-app-dots span {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-}
-.hero-app-dots .dot-red { background: #ef4444; }
-.hero-app-dots .dot-yellow { background: #f59e0b; }
-.hero-app-dots .dot-green { background: #10b981; }
-.hero-app-title {
-  color: #94a3b8;
-  font-size: 10.5px;
-  font-weight: 600;
-  letter-spacing: .02em;
-}
-.hero-app-img-wrap {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-  background: #f4f6fb;
-}
-.hero-dashboard-img {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
+  border: 1px solid #cfd2dc;
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 25px 70px rgba(17, 24, 45, .17);
+  transform: rotate(-1deg);
 }
 .ledger-topbar { display: flex; align-items: center; gap: 12px; min-height: 67px; padding: 13px 16px; border-bottom: 1px solid #dfe1e8; background: #f7f5f8; }
 .ledger-brandmark { width: 34px; height: 34px; display: grid; place-items: center; border-radius: 8px; background: var(--pink); color: #fff; font-weight: 800; }
