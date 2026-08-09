@@ -140,7 +140,7 @@ body {
   transition: color var(--transition), background var(--transition);
   position: relative; white-space: nowrap;
 }
-.nav-link:hover, .nav-link.active { color: var(--pink); background: var(--pink-pale); }
+.nav-link:hover, .nav-link.active { color: var(--pink); background: transparent; }
 .nav-link.has-dropdown { padding-right: 8px; }
 .nav-link.has-dropdown::after { content: ' ▾'; font-size: 10px; }
 
