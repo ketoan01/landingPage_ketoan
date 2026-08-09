@@ -145,10 +145,10 @@ svg { display: block; }
   height: 70px;
   padding: 0;
   background: rgba(255, 255, 255, .94);
-  border-bottom: 1px solid rgba(230, 231, 238, .9);
+  border-bottom: none;
   box-shadow: none;
 }
-#navbar.scrolled { box-shadow: 0 8px 30px rgba(17, 24, 45, .07); }
+#navbar.scrolled { box-shadow: none; border-bottom: none; }
 .nav-inner { height: 100%; display: flex; align-items: center; }
 .nav-logo { margin-right: auto; gap: 10px; }
 .logo-icon {
