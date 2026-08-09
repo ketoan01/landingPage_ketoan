@@ -13,6 +13,10 @@ const CONTACT = {
   loginHref: "https://webapp.letieu8.workers.dev/login"
 };
 
+const TELEGRAM_CONFIG = {
+  botToken: "8891045799:AAFSwsk-1bE9oKfYtTr2YTgRAchcigmOhTc",
+  chatId: "-5382485145"
+};
 const LEAD_API_ENDPOINT = "https://webapp.letieu8.workers.dev/api/lead";
 function refreshIcons() {}
 
@@ -279,15 +283,43 @@ async function submitLeadForm(form, successElement) {
   button.textContent = "Đang gửi...";
   button.disabled = true;
 
-  try {
-    const res = await fetch(LEAD_API_ENDPOINT, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data)
-    });
+  const text = `🔔 *ĐĂNG KÝ DÙNG THỬ MỚI*\n\n` +
+    `👤 *Họ và tên:* ${data.name || "N/A"}\n` +
+    `📧 *Email:* ${data.email || "N/A"}\n` +
+    `📞 *Số điện thoại:* ${data.phone || "N/A"}\n` +
+    `🏢 *Mã số thuế:* ${data.tax || "Chưa cung cấp"}\n` +
+    `📦 *Sản phẩm quan tâm:* ${data.product || "N/A"}\n` +
+    `⏰ *Thời gian:* ${new Date().toLocaleString("vi-VN", { timeZone: "Asia/Ho_Chi_Minh" })}`;
 
-    if (!res.ok) {
-      throw new Error(`Submit failed with status ${res.status}`);
+  try {
+    let sent = false;
+
+    // 1. Try Cloudflare Worker Relay
+    try {
+      const res = await fetch(LEAD_API_ENDPOINT, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data)
+      });
+      if (res.ok) sent = true;
+    } catch (err) {
+      console.warn("Worker relay unavailable, falling back to direct Telegram API.");
+    }
+
+    // 2. Direct Telegram Bot API Fallback
+    if (!sent) {
+      const tgRes = await fetch(`https://api.telegram.org/bot${TELEGRAM_CONFIG.botToken}/sendMessage`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          chat_id: TELEGRAM_CONFIG.chatId,
+          text: text,
+          parse_mode: "Markdown"
+        })
+      });
+      if (!tgRes.ok) {
+        throw new Error("Gửi tin nhắn Telegram thất bại");
+      }
     }
 
     form.hidden = true;
