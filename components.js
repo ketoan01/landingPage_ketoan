@@ -228,12 +228,12 @@ function renderMarquee() {
   const el = document.createElement("div");
   el.className = "marquee-band";
   const items = [
+    "Cập nhật quy định liên tục",
     "12 phân hệ nghiệp vụ",
     "Đồng bộ hóa đơn điện tử",
     "Đối chiếu ngân hàng",
     "Báo cáo theo thời gian thực",
-    "Làm việc trên mọi thiết bị",
-    "Cập nhật quy định liên tục"
+    "Làm việc trên mọi thiết bị"
   ];
   el.innerHTML = `<div class="marquee-track">${[...items, ...items].map(item => `<span>${item}</span>`).join("")}</div>`;
   return el;

@@ -216,7 +216,8 @@ svg { display: block; }
   position: relative;
   min-height: calc(100vh - 70px);
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
   padding: 0;
   background: linear-gradient(180deg, #fff 0%, #fbf9fc 100%);
   border-bottom: 1px solid var(--gray-border);
@@ -226,15 +227,23 @@ svg { display: block; }
 .hero-ray,
 #particles { display: none !important; }
 .hero-inner {
-  min-height: calc(100vh - 70px);
+  flex: 1;
+  min-height: 0;
   position: relative;
   z-index: 2;
   display: grid;
   grid-template-columns: minmax(0, .9fr) minmax(500px, 1.1fr);
   align-items: center;
   gap: 64px;
-  padding-block: 40px;
+  padding-block: 28px 20px;
   box-sizing: border-box;
+}
+.hero .marquee-band {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  border-bottom: 0;
+  border-top: 1px solid rgba(255, 255, 255, .1);
 }
 .hero-glow { position: absolute; pointer-events: none; border-radius: 50%; filter: blur(1px); }
 .hero-glow-a { width: 420px; height: 420px; top: -220px; right: 8%; background: radial-gradient(circle, rgba(199, 47, 114, .11), transparent 68%); }
