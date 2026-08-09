@@ -15,6 +15,11 @@ const CONTACT = {
   loginHref: "https://webapp.letieu8.workers.dev/login"
 };
 
+const COMPANY = {
+  name: "CÔNG TY TNHH BANANA SOFTWARE",
+  taxCode: "2803238388"
+};
+
 const TELEGRAM_CONFIG = {
   botToken: "8891045799:AAFSwsk-1bE9oKfYtTr2YTgRAchcigmOhTc",
   chatId: "-5382485145"
@@ -166,6 +171,10 @@ function renderFooter() {
             <span class="brand-logo-text">kế toán <span>ONE</span></span>
           </a>
           <p>Nền tảng kế toán cloud giúp doanh nghiệp quản lý dữ liệu tài chính, chứng từ và báo cáo trong một quy trình thống nhất.</p>
+          <div class="footer-company-info">
+            <strong>${COMPANY.name}</strong>
+            <span>Mã số thuế: ${COMPANY.taxCode}</span>
+          </div>
           <div class="footer-contact-list">
             <a href="${CONTACT.phoneHref}"><i class="fa-solid fa-phone" aria-hidden="true"></i>${CONTACT.phoneDisplay}</a>
             <a href="${CONTACT.zaloHref}" target="_blank" rel="noopener"><i class="fa-solid fa-comment-dots" aria-hidden="true"></i>Zalo Chat hỗ trợ</a>
@@ -202,7 +211,7 @@ function renderFooter() {
       </div>
       <hr class="footer-divider">
       <div class="footer-bottom">
-        <div>© 2026 kế toán ONE</div>
+        <div>© 2026 kế toán ONE · ${COMPANY.name} (MST: ${COMPANY.taxCode})</div>
         <div><a href="#">Chính sách bảo mật</a><span>·</span><a href="#">Điều khoản sử dụng</a></div>
       </div>
     </div>

@@ -894,6 +894,19 @@ i.fa-brands { display: inline-block; line-height: 1; }
 .footer-logo .brand-logo-text {
   color: #ffffff;
 }
+.footer-company-info {
+  margin-block: 10px 14px;
+  font-size: 11.5px;
+  color: rgba(255, 255, 255, .78);
+  line-height: 1.5;
+}
+.footer-company-info strong {
+  display: block;
+  color: #ffffff;
+  font-weight: 750;
+  font-size: 12px;
+  margin-bottom: 2px;
+}
 
 /* Floating Zalo Chat & QR Popover */
 .zalo-float-container {
