@@ -11,7 +11,7 @@ const CONTACT = {
   phoneHref: "tel:0392405600",
   phone2Display: "0335 581 402",
   phone2Href: "tel:0335581402",
-  telegramHref: "https://t.me/+84392405600",
+  telegramHref: "https://t.me/tieu_exe",
   zaloHref: "https://zalo.me/1479234215132012086",
   zaloQr: "assets/zalo-qr.png",
   loginHref: "https://webapp.letieu8.workers.dev/login"
@@ -181,7 +181,7 @@ function renderFooter() {
             <a href="${CONTACT.phoneHref}"><i class="fa-solid fa-phone" aria-hidden="true"></i>Hotline 1: ${CONTACT.phoneDisplay}</a>
             <a href="${CONTACT.phone2Href}"><i class="fa-solid fa-phone" aria-hidden="true"></i>Hotline 2: ${CONTACT.phone2Display}</a>
             <a href="${CONTACT.zaloHref}" target="_blank" rel="noopener"><i class="fa-solid fa-comment-dots" aria-hidden="true"></i>Zalo Chat hỗ trợ</a>
-            <a href="${CONTACT.telegramHref}" target="_blank" rel="noopener"><i class="fa-solid fa-paper-plane" aria-hidden="true"></i>Telegram hỗ trợ</a>
+            <a href="${CONTACT.telegramHref}" target="_blank" rel="noopener"><i class="fa-solid fa-paper-plane" aria-hidden="true"></i>Telegram: @tieu_exe</a>
           </div>
         </div>
         <div>
