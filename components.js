@@ -10,6 +10,8 @@ const CONTACT = {
   phoneDisplay: "0392 405 600",
   phoneHref: "tel:0392405600",
   telegramHref: "https://t.me/+84392405600",
+  zaloHref: "https://zalo.me/1479234215132012086",
+  zaloQr: "assets/zalo-qr.png",
   loginHref: "https://webapp.letieu8.workers.dev/login"
 };
 
@@ -100,6 +102,7 @@ function renderNavbar(activePage = "") {
       </div>
 
       <div class="nav-actions">
+        <a href="${CONTACT.zaloHref}" target="_blank" rel="noopener" class="nav-zalo-btn"><i class="fa-solid fa-comment-dots" aria-hidden="true"></i>Zalo Chat</a>
         <a href="${CONTACT.phoneHref}" class="nav-hotline"><i class="fa-solid fa-phone" aria-hidden="true"></i>${CONTACT.phoneDisplay}</a>
         <a href="${CONTACT.loginHref}" class="btn-outline btn-nav">Đăng nhập</a>
         <button type="button" onclick="openRegModal()" class="btn-brand btn-nav">Đăng ký dùng thử</button>
@@ -173,6 +176,7 @@ function renderNavbar(activePage = "") {
   });
 
   window.addEventListener("scroll", () => nav.classList.toggle("scrolled", window.scrollY > 24));
+  renderSocialFloat();
   refreshIcons();
 }
 
@@ -194,6 +198,7 @@ function renderFooter() {
           <p>Nền tảng kế toán cloud giúp doanh nghiệp quản lý dữ liệu tài chính, chứng từ và báo cáo trong một quy trình thống nhất.</p>
           <div class="footer-contact-list">
             <a href="${CONTACT.phoneHref}"><i class="fa-solid fa-phone" aria-hidden="true"></i>${CONTACT.phoneDisplay}</a>
+            <a href="${CONTACT.zaloHref}" target="_blank" rel="noopener"><i class="fa-solid fa-comment-dots" aria-hidden="true"></i>Zalo Chat hỗ trợ</a>
             <a href="${CONTACT.telegramHref}" target="_blank" rel="noopener"><i class="fa-solid fa-paper-plane" aria-hidden="true"></i>Telegram hỗ trợ</a>
           </div>
         </div>
@@ -331,5 +336,22 @@ async function submitLeadForm(form, successElement) {
   }
 }
 
-// Backward-compatible no-op for old page calls.
-function renderSocialFloat() {}
+function renderSocialFloat() {
+  if (document.getElementById("zaloFloatContainer")) return;
+  const container = document.createElement("div");
+  container.id = "zaloFloatContainer";
+  container.className = "zalo-float-container";
+  container.innerHTML = `
+    <div class="zalo-qr-popover">
+      <h5>Quét mã Zalo để Chat</h5>
+      <img src="${root}${CONTACT.zaloQr}" alt="Zalo QR Code" class="zalo-qr-img" />
+      <p>Tư vấn & Hỗ trợ KeToan Cloud 24/7</p>
+      <a href="${CONTACT.zaloHref}" target="_blank" rel="noopener" class="zalo-qr-btn">Mở Zalo Chat</a>
+    </div>
+    <a href="${CONTACT.zaloHref}" target="_blank" rel="noopener" class="zalo-float-btn" aria-label="Chat Zalo hỗ trợ">
+      <i class="fa-solid fa-comment-dots" aria-hidden="true"></i>
+      <span>Chat Zalo</span>
+    </a>
+  `;
+  document.body.appendChild(container);
+}

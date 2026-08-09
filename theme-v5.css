@@ -933,3 +933,107 @@ i.fa-brands { display: inline-block; line-height: 1; }
   }
 }
 
+/* Floating Zalo Chat & QR Popover */
+.zalo-float-container {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.zalo-qr-popover {
+  display: none;
+  width: 210px;
+  padding: 14px;
+  border-radius: 16px;
+  background: #ffffff;
+  box-shadow: 0 16px 45px rgba(0, 0, 0, .18);
+  border: 1px solid var(--gray-border);
+  text-align: center;
+  margin-bottom: 12px;
+  transform-origin: bottom right;
+  animation: zaloPopIn .2s cubic-bezier(.2, .7, .2, 1);
+}
+@keyframes zaloPopIn {
+  from { opacity: 0; transform: scale(.9) translateY(10px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+.zalo-float-container:hover .zalo-qr-popover {
+  display: block;
+}
+.zalo-qr-popover h5 {
+  margin: 0 0 8px;
+  font-size: 12.5px;
+  font-weight: 800;
+  color: var(--navy);
+}
+.zalo-qr-img {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 8px;
+  display: block;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+}
+.zalo-qr-popover p {
+  margin: 0 0 10px;
+  font-size: 11px;
+  color: var(--gray-text);
+  line-height: 1.4;
+}
+.zalo-qr-btn {
+  display: block;
+  padding: 7px 12px;
+  border-radius: 8px;
+  background: #0068ff;
+  color: #ffffff;
+  font-size: 11.5px;
+  font-weight: 750;
+  text-decoration: none;
+  transition: background .2s ease;
+}
+.zalo-qr-btn:hover { background: #0056d6; color: #fff; }
+
+.zalo-float-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 11px 18px;
+  border-radius: 99px;
+  background: #0068ff;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 800;
+  text-decoration: none;
+  box-shadow: 0 8px 25px rgba(0, 104, 255, .35);
+  transition: transform .22s cubic-bezier(.2, .7, .2, 1), box-shadow .22s cubic-bezier(.2, .7, .2, 1);
+}
+.zalo-float-btn:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 12px 32px rgba(0, 104, 255, .48);
+  color: #ffffff;
+}
+.zalo-float-btn i {
+  font-size: 16px;
+}
+
+.nav-zalo-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 13px;
+  border-radius: 9px;
+  background: #eef5ff;
+  color: #0068ff;
+  font-size: 12.5px;
+  font-weight: 750;
+  text-decoration: none;
+  transition: background .2s ease, color .2s ease;
+}
+.nav-zalo-btn:hover {
+  background: #0068ff;
+  color: #ffffff;
+}
+
