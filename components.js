@@ -36,14 +36,9 @@ function renderNavbar(activePage = "") {
   nav.id = "navbar";
   nav.innerHTML = `
     <div class="nav-inner">
-      <a href="${root}index.html"
-        class="nav-logo brand-logo-frame"
-        aria-label="KeToan Cloud">
-        <img
-          src="${root}assets/logo-ketoan-cloud.png"
-          alt="KeToan Cloud"
-          class="brand-logo-image"
-        />
+      <a href="${root}index.html" class="nav-logo" aria-label="kế toán ONE">
+        <img src="${root}assets/logo.png" alt="kế toán ONE" class="brand-logo-img" />
+        <span class="brand-logo-text">kế toán <span>ONE</span></span>
       </a>
 
       <div class="nav-links">
@@ -111,7 +106,7 @@ function renderNavbar(activePage = "") {
   modal.innerHTML = `
     <div class="reg-modal-card" role="dialog" aria-modal="true" aria-labelledby="regModalTitle">
       <button onclick="closeRegModal()" class="reg-modal-close" aria-label="Đóng"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
-      <div class="modal-kicker">Bắt đầu với KeToan Cloud</div>
+      <div class="modal-kicker">Bắt đầu với kế toán ONE</div>
       <h3 id="regModalTitle">Đăng ký dùng thử</h3>
       <p class="modal-sub">Để lại thông tin, đội ngũ tư vấn sẽ liên hệ và thiết lập tài khoản phù hợp với mô hình của bạn.</p>
       <form id="modalRegForm" class="modal-reg-form">
@@ -132,7 +127,7 @@ function renderNavbar(activePage = "") {
       <div id="modalSuccess" class="modal-success" hidden>
         <div class="success-icon"><i class="fa-solid fa-circle-check" aria-hidden="true"></i></div>
         <h4>Đã nhận thông tin</h4>
-        <p>Đội ngũ KeToan sẽ liên hệ với bạn trong thời gian sớm nhất.</p>
+        <p>Đội ngũ kế toán ONE sẽ liên hệ với bạn trong thời gian sớm nhất.</p>
       </div>
     </div>
   `;
@@ -166,14 +161,9 @@ function renderFooter() {
     <div class="footer-inner">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="${root}index.html"
-            class="nav-logo footer-logo brand-logo-frame"
-            aria-label="KeToan Cloud">
-            <img
-              src="${root}assets/logo-ketoan-cloud.png"
-              alt="KeToan Cloud"
-              class="brand-logo-image"
-            />
+          <a href="${root}index.html" class="nav-logo footer-logo" aria-label="kế toán ONE">
+            <img src="${root}assets/logo.png" alt="kế toán ONE" class="brand-logo-img" />
+            <span class="brand-logo-text">kế toán <span>ONE</span></span>
           </a>
           <p>Nền tảng kế toán cloud giúp doanh nghiệp quản lý dữ liệu tài chính, chứng từ và báo cáo trong một quy trình thống nhất.</p>
           <div class="footer-contact-list">
@@ -212,7 +202,7 @@ function renderFooter() {
       </div>
       <hr class="footer-divider">
       <div class="footer-bottom">
-        <div>© 2026 KeToan Cloud</div>
+        <div>© 2026 kế toán ONE</div>
         <div><a href="#">Chính sách bảo mật</a><span>·</span><a href="#">Điều khoản sử dụng</a></div>
       </div>
     </div>
@@ -325,7 +315,7 @@ function renderSocialFloat() {
     <div class="zalo-qr-popover">
       <h5>Quét mã Zalo để Chat</h5>
       <img src="${root}${CONTACT.zaloQr}" alt="Zalo QR Code" class="zalo-qr-img" />
-      <p>Tư vấn & Hỗ trợ KeToan Cloud 24/7</p>
+      <p>Tư vấn & Hỗ trợ kế toán ONE 24/7</p>
       <a href="${CONTACT.zaloHref}" target="_blank" rel="noopener" class="zalo-qr-btn">Mở Zalo Chat</a>
     </div>
     <a href="${CONTACT.zaloHref}" target="_blank" rel="noopener" class="zalo-float-btn" aria-label="Chat Zalo hỗ trợ">

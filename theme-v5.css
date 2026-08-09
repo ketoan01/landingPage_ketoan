@@ -865,72 +865,34 @@ i.fa-brands { display: inline-block; line-height: 1; }
   transform: translateY(0);
 }
 
-/* Khung crop logo vì ảnh gốc có khoảng trắng lớn */
-.brand-logo-frame {
-  width: 220px;
-  height: 56px;
-  flex: 0 0 220px;
-  overflow: hidden;
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
+/* Logo & Brand Styling */
+.nav-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  margin-right: auto;
 }
-
-/* Phóng ảnh và đẩy phần logo thật vào trong khung */
-.brand-logo-frame .brand-logo-image {
+.brand-logo-img {
+  height: 42px;
+  width: auto;
   display: block;
-  width: 320px;
-  height: auto;
-  max-width: none;
-  flex-shrink: 0;
-  transform: translate(-54px, -68px);
+  object-fit: contain;
 }
-
-/* Logo footer: nền trắng để không bị chìm */
-.footer-logo.brand-logo-frame {
-  width: 270px;
-  height: 76px;
-  flex-basis: 270px;
-  padding: 0;
-  background: #ffffff;
-  border-radius: 12px;
-  overflow: hidden;
+.brand-logo-text {
+  font-size: 21px;
+  font-weight: 800;
+  color: var(--navy);
+  letter-spacing: -.03em;
+  line-height: 1;
+  text-transform: uppercase;
 }
-
-.footer-logo.brand-logo-frame .brand-logo-image {
-  width: 390px;
-  max-width: none;
-  transform: translate(-66px, -84px);
+.brand-logo-text span {
+  color: var(--pink);
+  font-weight: 900;
 }
-
-@media (max-width: 768px) {
-  .brand-logo-frame {
-    width: 170px;
-    height: 46px;
-    flex-basis: 170px;
-  }
-
-  .brand-logo-frame .brand-logo-image {
-    width: 255px;
-    transform: translate(-43px, -54px);
-  }
-
-  .footer-logo.brand-logo-frame {
-    width: 240px;
-    height: 68px;
-    flex-basis: 240px;
-  }
-
-  .footer-logo.brand-logo-frame .brand-logo-image {
-    width: 350px;
-    transform: translate(-59px, -75px);
-  }
-}
-
-@media (max-width: 768px) {
-  .brand-logo-image {
-    width: 155px;
-  }
+.footer-logo .brand-logo-text {
+  color: #ffffff;
 }
 
 /* Floating Zalo Chat & QR Popover */
