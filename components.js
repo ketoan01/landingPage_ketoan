@@ -128,8 +128,7 @@ function renderNavbar(activePage = "") {
             <option value="" disabled selected>Chọn sản phẩm</option>
             <option>Kế toán doanh nghiệp</option>
             <option>Kế toán hộ kinh doanh</option>
-            <option>Dịch vụ kế toán</option>
-            <option>Hóa đơn điện tử</option>
+            <option>Kế toán dịch vụ</option>
           </select>
         </label>
         <button type="submit" class="btn-brand modal-submit">Đăng ký dùng thử</button>
