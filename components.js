@@ -19,7 +19,8 @@ const CONTACT = {
 
 const COMPANY = {
   name: "CÔNG TY TNHH BANANA SOFTWARE",
-  taxCode: "2803238388"
+  taxCode: "2803238388",
+  logo: "assets/banana-logo.png"
 };
 
 const TELEGRAM_CONFIG = {
@@ -174,8 +175,11 @@ function renderFooter() {
           </a>
           <p>Nền tảng kế toán cloud giúp doanh nghiệp quản lý dữ liệu tài chính, chứng từ và báo cáo trong một quy trình thống nhất.</p>
           <div class="footer-company-info">
-            <strong>${COMPANY.name}</strong>
-            <span>Mã số thuế: ${COMPANY.taxCode}</span>
+            <img src="${root}${COMPANY.logo}" alt="${COMPANY.name}" class="company-logo-img" />
+            <div>
+              <strong>${COMPANY.name}</strong>
+              <span>Mã số thuế: ${COMPANY.taxCode}</span>
+            </div>
           </div>
           <div class="footer-contact-list">
             <a href="${CONTACT.phoneHref}"><i class="fa-solid fa-phone" aria-hidden="true"></i>Hotline 1: ${CONTACT.phoneDisplay}</a>
