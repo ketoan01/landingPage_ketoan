@@ -32,7 +32,7 @@
 
 html { background: #fff; }
 body {
-  font-family: "Be Vietnam Pro", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: "Plus Jakarta Sans", "Be Vietnam Pro", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   color: var(--text-dark);
   background: #fff;
   font-size: 15px;
