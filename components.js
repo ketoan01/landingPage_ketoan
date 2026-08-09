@@ -103,7 +103,6 @@ function renderNavbar(activePage = "") {
 
       <div class="nav-actions">
         <a href="${CONTACT.zaloHref}" target="_blank" rel="noopener" class="nav-zalo-btn"><i class="fa-solid fa-comment-dots" aria-hidden="true"></i>Zalo Chat</a>
-        <a href="${CONTACT.phoneHref}" class="nav-hotline"><i class="fa-solid fa-phone" aria-hidden="true"></i>${CONTACT.phoneDisplay}</a>
         <a href="${CONTACT.loginHref}" class="btn-outline btn-nav">Đăng nhập</a>
         <button type="button" onclick="openRegModal()" class="btn-brand btn-nav">Đăng ký dùng thử</button>
       </div>
