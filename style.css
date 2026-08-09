@@ -100,16 +100,22 @@ body {
 ══════════════════════════════════════ */
  #navbar {
    position: sticky; top: 0; z-index: 500;
-   background: rgba(255,255,255,.94);
-   backdrop-filter: blur(16px);
-   -webkit-backdrop-filter: blur(16px);
+   background: transparent;
+   backdrop-filter: none;
+   -webkit-backdrop-filter: none;
    box-shadow: none;
    border-bottom: none;
    display: flex; align-items: center;
    padding: 0 48px; height: 64px; gap: 0;
-   transition: none;
+   transition: background .25s ease, backdrop-filter .25s ease, box-shadow .25s ease;
  }
- #navbar.scrolled { box-shadow: none; border-bottom: none; }
+ #navbar.scrolled {
+   background: rgba(255, 255, 255, .95);
+   backdrop-filter: blur(12px);
+   -webkit-backdrop-filter: blur(12px);
+   box-shadow: 0 4px 20px rgba(17, 24, 45, .05);
+   border-bottom: none;
+ }
 
 /* logo */
 .nav-logo {
