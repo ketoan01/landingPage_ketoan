@@ -214,8 +214,9 @@ svg { display: block; }
 /* Hero – keeps original left/right composition */
 .hero {
   position: relative;
-  min-height: 650px;
-  display: block;
+  min-height: calc(100vh - 70px);
+  display: flex;
+  align-items: center;
   padding: 0;
   background: linear-gradient(180deg, #fff 0%, #fbf9fc 100%);
   border-bottom: 1px solid var(--gray-border);
@@ -225,14 +226,15 @@ svg { display: block; }
 .hero-ray,
 #particles { display: none !important; }
 .hero-inner {
-  min-height: 650px;
+  min-height: calc(100vh - 70px);
   position: relative;
   z-index: 2;
   display: grid;
   grid-template-columns: minmax(0, .9fr) minmax(500px, 1.1fr);
   align-items: center;
   gap: 64px;
-  padding-block: 76px 66px;
+  padding-block: 40px;
+  box-sizing: border-box;
 }
 .hero-glow { position: absolute; pointer-events: none; border-radius: 50%; filter: blur(1px); }
 .hero-glow-a { width: 420px; height: 420px; top: -220px; right: 8%; background: radial-gradient(circle, rgba(199, 47, 114, .11), transparent 68%); }
