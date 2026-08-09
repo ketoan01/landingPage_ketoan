@@ -13,10 +13,7 @@ const CONTACT = {
   loginHref: "https://webapp.letieu8.workers.dev/login"
 };
 
-const TELEGRAM_CONFIG = {
-  botToken: "", // Paste your Telegram Bot Token here (e.g. "123456789:ABCdefGhIJK...")
-  chatId: ""    // Paste your Telegram Group or Chat ID here (e.g. "-1001234567890")
-};
+const LEAD_API_ENDPOINT = "https://webapp.letieu8.workers.dev/api/lead";
 function refreshIcons() {}
 
 let emailJSPromise = null;
@@ -282,32 +279,15 @@ async function submitLeadForm(form, successElement) {
   button.textContent = "Đang gửi...";
   button.disabled = true;
 
-  const text = `🔔 *ĐĂNG KÝ DÙNG THỬ MỚI*\n\n` +
-    `👤 *Họ và tên:* ${data.name || "N/A"}\n` +
-    `📧 *Email:* ${data.email || "N/A"}\n` +
-    `📞 *Số điện thoại:* ${data.phone || "N/A"}\n` +
-    `🏢 *Mã số thuế:* ${data.tax || "Chưa cung cấp"}\n` +
-    `📦 *Sản phẩm quan tâm:* ${data.product || "N/A"}\n` +
-    `⏰ *Thời gian:* ${new Date().toLocaleString("vi-VN")}`;
-
   try {
-    if (TELEGRAM_CONFIG.botToken && TELEGRAM_CONFIG.chatId) {
-      const res = await fetch(`https://api.telegram.org/bot${TELEGRAM_CONFIG.botToken}/sendMessage`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          chat_id: TELEGRAM_CONFIG.chatId,
-          text: text,
-          parse_mode: "Markdown"
-        })
-      });
+    const res = await fetch(LEAD_API_ENDPOINT, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data)
+    });
 
-      if (!res.ok) {
-        const errData = await res.json().catch(() => ({}));
-        throw new Error(`Telegram API Error: ${errData.description || res.statusText}`);
-      }
-    } else {
-      console.warn("TELEGRAM_CONFIG: botToken or chatId is not set in components.js");
+    if (!res.ok) {
+      throw new Error(`Submit failed with status ${res.status}`);
     }
 
     form.hidden = true;
