@@ -9,6 +9,8 @@ const root = pathParts.includes("tinh-nang") ? "../" : "./";
 const CONTACT = {
   phoneDisplay: "0392 405 600",
   phoneHref: "tel:0392405600",
+  phone2Display: "0335 581 402",
+  phone2Href: "tel:0335581402",
   telegramHref: "https://t.me/+84392405600",
   zaloHref: "https://zalo.me/1479234215132012086",
   zaloQr: "assets/zalo-qr.png",
@@ -176,7 +178,8 @@ function renderFooter() {
             <span>Mã số thuế: ${COMPANY.taxCode}</span>
           </div>
           <div class="footer-contact-list">
-            <a href="${CONTACT.phoneHref}"><i class="fa-solid fa-phone" aria-hidden="true"></i>${CONTACT.phoneDisplay}</a>
+            <a href="${CONTACT.phoneHref}"><i class="fa-solid fa-phone" aria-hidden="true"></i>Hotline 1: ${CONTACT.phoneDisplay}</a>
+            <a href="${CONTACT.phone2Href}"><i class="fa-solid fa-phone" aria-hidden="true"></i>Hotline 2: ${CONTACT.phone2Display}</a>
             <a href="${CONTACT.zaloHref}" target="_blank" rel="noopener"><i class="fa-solid fa-comment-dots" aria-hidden="true"></i>Zalo Chat hỗ trợ</a>
             <a href="${CONTACT.telegramHref}" target="_blank" rel="noopener"><i class="fa-solid fa-paper-plane" aria-hidden="true"></i>Telegram hỗ trợ</a>
           </div>
@@ -309,7 +312,7 @@ async function submitLeadForm(form, successElement) {
     refreshIcons();
   } catch (error) {
     console.error("Form submit error:", error);
-    alert("Chưa thể gửi thông tin. Vui lòng thử lại hoặc gọi 0392 405 600.");
+    alert("Chưa thể gửi thông tin. Vui lòng thử lại hoặc gọi " + CONTACT.phoneDisplay + " / " + CONTACT.phone2Display + ".");
     button.textContent = defaultText;
     button.disabled = false;
   }
