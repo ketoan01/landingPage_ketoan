@@ -137,8 +137,8 @@ function renderNavbar(activePage = "") {
         <label>Số điện thoại<input name="phone" type="tel" placeholder="09xx xxx xxx" required></label>
         <label>Mã số thuế<input name="tax" type="text" placeholder="Nhập nếu doanh nghiệp đã có"></label>
         <label>Sản phẩm quan tâm
-          <select name="product" required>
-            <option value="" disabled selected>Chọn sản phẩm</option>
+          <select name="product">
+            <option value="" selected>Chọn sản phẩm (Không bắt buộc)</option>
             <option>Kế toán doanh nghiệp</option>
             <option>Kế toán hộ kinh doanh</option>
             <option>Kế toán dịch vụ</option>
