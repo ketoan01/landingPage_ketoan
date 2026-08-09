@@ -18,7 +18,7 @@ Bản này giữ bố cục landing cũ (hero 2 cột, giới thiệu, số li�
   - 90% giảm thao tác nhập liệu lặp lại
   - 24/7 làm việc trên cloud
 - Footer có số điện thoại, Telegram, Sản phẩm và Sản phẩm khác.
-- EmailJS được tải tự động trên mọi trang khi gửi form.
+- Thông báo đăng ký dùng thử được tự động gửi qua Telegram Bot API đến Telegram Group.
 - Animation có fallback: nội dung vẫn hiển thị khi CDN GSAP không tải được.
 
 ## Chỉnh thông tin liên hệ

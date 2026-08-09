@@ -30,25 +30,6 @@ function escapeHtml(str) {
 }
 function refreshIcons() {}
 
-let emailJSPromise = null;
-function ensureEmailJS() {
-  if (window.emailjs) {
-    window.emailjs.init("VxLy2TYylhklg9NR5");
-    return Promise.resolve(window.emailjs);
-  }
-  if (emailJSPromise) return emailJSPromise;
-  emailJSPromise = new Promise((resolve, reject) => {
-    const script = document.createElement("script");
-    script.src = "https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js";
-    script.onload = () => {
-      window.emailjs.init("VxLy2TYylhklg9NR5");
-      resolve(window.emailjs);
-    };
-    script.onerror = () => reject(new Error("Không tải được EmailJS"));
-    document.head.appendChild(script);
-  });
-  return emailJSPromise;
-}
 
 function renderNavbar(activePage = "") {
   const nav = document.createElement("nav");
