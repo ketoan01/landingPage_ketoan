@@ -14,7 +14,7 @@ Bản này giữ bố cục landing cũ (hero 2 cột, giới thiệu, số li�
 - Bỏ nội dung “miễn phí” và các thông điệp giá.
 - Thay số liệu “doanh nghiệp tin dùng / kinh nghiệm” bằng thông số sản phẩm:
   - 12 phân hệ nghiệp vụ
-  - 40+ ngân hàng kết nối
+  - 100% số liệu cập nhật thời gian thực
   - 90% giảm thao tác nhập liệu lặp lại
   - 24/7 làm việc trên cloud
 - Footer có số điện thoại, Telegram, Sản phẩm và Sản phẩm khác.
