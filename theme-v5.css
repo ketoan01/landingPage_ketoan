@@ -488,7 +488,7 @@ svg { display: block; }
 /* Footer */
 footer { padding: 0; background: #0f1526; }
 .footer-inner { padding-block: 60px 25px; }
-.footer-grid { grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 56px; margin-bottom: 45px; }
+.footer-grid { grid-template-columns: 1.8fr 1.3fr 1fr; gap: 48px; margin-bottom: 45px; }
 .footer-logo { margin: 0 0 17px; }
 .footer-logo .logo-text { color: #fff; }
 .footer-brand p { max-width: 360px; margin: 0 0 20px; color: rgba(255,255,255,.5); }

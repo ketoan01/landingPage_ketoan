@@ -189,21 +189,12 @@ function renderFooter() {
           </div>
         </div>
         <div>
-          <h4>Sản phẩm</h4>
-          <ul>
-            <li><a href="${root}tinh-nang/ke-toan-tong-hop.html">Kế toán doanh nghiệp</a></li>
-            <li><a href="${root}tinh-nang/hoa-don-dien-tu.html">Hoá đơn điện tử</a></li>
-            <li><a href="${root}tinh-nang/ket-noi-ngan-hang.html">Kết nối ngân hàng</a></li>
-            <li><a href="${root}tinh-nang/quan-ly-thue.html">Quản lý thuế</a></li>
-          </ul>
-        </div>
-        <div>
           <h4>Sản phẩm khác</h4>
           <ul>
-            <li><a href="#">Kế toán hộ kinh doanh</a></li>
-            <li><a href="#">Dịch vụ kế toán</a></li>
-            <li><a href="#">Quản lý bán hàng</a></li>
-            <li><a href="#">Quản lý nhân sự</a></li>
+            <li><a href="https://taihoadon.online" target="_blank" rel="noopener">Tải hóa đơn điện tử (taihoadon.online)</a></li>
+            <li><a href="https://taitokhai.online" target="_blank" rel="noopener">Tải tờ khai thuế (taitokhai.online)</a></li>
+            <li><a href="https://taihoadon.online/tra-cuu-ma-so-thue" target="_blank" rel="noopener">Tra MST hàng loạt</a></li>
+            <li><a href="https://taihoadon.online/hoa-don-tien-dien-evn" target="_blank" rel="noopener">Tải hóa đơn tiền điện EVN</a></li>
           </ul>
         </div>
         <div>
