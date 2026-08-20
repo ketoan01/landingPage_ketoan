@@ -271,6 +271,41 @@ svg { display: block; }
   text-transform: uppercase;
 }
 .eyebrow-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--pink); box-shadow: 0 0 0 5px var(--pink-pale); }
+.eyebrow-alpha-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 9px;
+  border-radius: 20px;
+  background: var(--pink);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .06em;
+}
+.eyebrow-alpha-tag i { font-size: 10px; }
+.hero-free-note {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 18px;
+  padding: 9px 16px;
+  background: rgba(199, 47, 114, 0.06);
+  border: 1px dashed rgba(199, 47, 114, 0.35);
+  border-radius: 10px;
+  color: var(--navy);
+  font-size: 13.5px;
+  line-height: 1.45;
+}
+.hero-free-note i { color: var(--pink); font-size: 14px; flex-shrink: 0; }
+.reg-title-highlight { color: #ffb3d1; }
+.reg-check-gift { background: rgba(255, 215, 0, 0.25) !important; color: #ffe600 !important; }
+.reg-benefits li.benefit-highlight {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: 10px 12px;
+  margin-bottom: 4px;
+}
 .hero-headline {
   max-width: 720px;
   margin: 0 0 20px;

@@ -114,9 +114,9 @@ function renderNavbar(activePage = "") {
   modal.innerHTML = `
     <div class="reg-modal-card" role="dialog" aria-modal="true" aria-labelledby="regModalTitle">
       <button onclick="closeRegModal()" class="reg-modal-close" aria-label="Đóng"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
-      <div class="modal-kicker">Bắt đầu với kế toán ONE</div>
-      <h3 id="regModalTitle">Đăng ký dùng thử</h3>
-      <p class="modal-sub">Để lại thông tin, đội ngũ tư vấn sẽ liên hệ và thiết lập tài khoản phù hợp với mô hình của bạn.</p>
+      <div class="modal-kicker"><i class="fa-solid fa-flask" aria-hidden="true"></i> Alpha Test — Ưu đãi Early User</div>
+      <h3 id="regModalTitle">Đăng ký dùng thử (Miễn phí 1 năm)</h3>
+      <p class="modal-sub">Chương trình Alpha Test: Đăng ký dùng thử ngay hôm nay để nhận <strong>1 năm sử dụng miễn phí</strong> phần mềm kế toán ONE.</p>
       <form id="modalRegForm" class="modal-reg-form">
         <label>Họ và tên<input name="name" type="text" placeholder="Nguyễn Văn A" required></label>
         <label>Email<input name="email" type="email" placeholder="name@company.vn" required></label>
@@ -222,6 +222,7 @@ function renderMarquee() {
   const el = document.createElement("div");
   el.className = "marquee-band";
   const items = [
+    "Alpha Test: Miễn phí 1 năm cho Early User",
     "Cập nhật quy định liên tục",
     "12 phân hệ nghiệp vụ",
     "Đồng bộ hóa đơn điện tử",
@@ -240,9 +241,9 @@ function renderCTABand() {
   el.innerHTML = `
     <div class="cta-inner">
       <div>
-        <div class="cta-kicker">Bắt đầu triển khai</div>
-        <h2>Đưa dữ liệu kế toán về một nơi duy nhất</h2>
-        <p>Đăng ký để được tư vấn cấu hình phù hợp với quy mô và quy trình hiện tại của doanh nghiệp.</p>
+        <div class="cta-kicker"><i class="fa-solid fa-flask" aria-hidden="true"></i> Chương trình Alpha Test</div>
+        <h2>Đăng ký dùng thử — Miễn phí 1 năm cho Early User</h2>
+        <p>Đưa dữ liệu kế toán về một nơi duy nhất. Đăng ký dùng thử ngay trong đợt Alpha Test để trải nghiệm 1 năm miễn phí toàn bộ phân hệ.</p>
       </div>
       <button type="button" onclick="openRegModal()" class="btn-white">Đăng ký dùng thử <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
     </div>
