@@ -20,6 +20,7 @@ const CONTACT = {
 const COMPANY = {
   name: "CÔNG TY TNHH BANANA SOFTWARE",
   taxCode: "2803238388",
+  website: "https://bananasoftware.net/",
   logo: "assets/banana-logo.png"
 };
 
@@ -175,10 +176,13 @@ function renderFooter() {
           </a>
           <p>Nền tảng kế toán cloud giúp doanh nghiệp quản lý dữ liệu tài chính, chứng từ và báo cáo trong một quy trình thống nhất.</p>
           <div class="footer-company-info">
-            <img src="${root}${COMPANY.logo}" alt="${COMPANY.name}" class="company-logo-img" />
+            <a href="${COMPANY.website}" target="_blank" rel="noopener" aria-label="${COMPANY.name}">
+              <img src="${root}${COMPANY.logo}" alt="${COMPANY.name}" class="company-logo-img" />
+            </a>
             <div>
-              <strong>${COMPANY.name}</strong>
+              <strong><a href="${COMPANY.website}" target="_blank" rel="noopener">${COMPANY.name}</a></strong>
               <span>Mã số thuế: ${COMPANY.taxCode}</span>
+              <span>Website: <a href="${COMPANY.website}" target="_blank" rel="noopener">bananasoftware.net</a></span>
             </div>
           </div>
           <div class="footer-contact-list">
@@ -209,7 +213,7 @@ function renderFooter() {
       </div>
       <hr class="footer-divider">
       <div class="footer-bottom">
-        <div>© 2026 kế toán ONE · ${COMPANY.name} (MST: ${COMPANY.taxCode})</div>
+        <div>© 2026 kế toán ONE · <a href="${COMPANY.website}" target="_blank" rel="noopener">${COMPANY.name}</a> (MST: ${COMPANY.taxCode})</div>
         <div><a href="#">Chính sách bảo mật</a><span>·</span><a href="#">Điều khoản sử dụng</a></div>
       </div>
     </div>
