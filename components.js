@@ -14,7 +14,8 @@ const CONTACT = {
   telegramHref: "https://t.me/tieu_exe",
   zaloHref: "https://zalo.me/1479234215132012086",
   zaloQr: "assets/zalo-qr.png",
-  loginHref: "https://app.ketoan.one/login"
+  loginHref: "https://app.ketoan.one/login",
+  registerHref: "https://app.ketoan.one/register"
 };
 
 const COMPANY = {
@@ -89,7 +90,7 @@ function renderNavbar(activePage = "") {
       <div class="nav-actions">
         <a href="${CONTACT.zaloHref}" target="_blank" rel="noopener" class="nav-zalo-btn"><i class="fa-solid fa-comment-dots" aria-hidden="true"></i>Zalo Chat</a>
         <a href="${CONTACT.loginHref}" class="btn-outline btn-nav">Đăng nhập</a>
-        <button type="button" onclick="openRegModal()" class="btn-brand btn-nav">Đăng ký dùng thử</button>
+        <a href="${CONTACT.registerHref}" class="btn-brand btn-nav">Đăng ký dùng thử</a>
       </div>
       <button class="nav-burger" id="burger" aria-label="Mở menu"><i class="fa-solid fa-bars" aria-hidden="true"></i></button>
     </div>
@@ -105,54 +106,9 @@ function renderNavbar(activePage = "") {
     <a href="${root}tin-tuc.html">Tin tức</a>
     <a href="${root}index.html#dang-ky">Liên hệ</a>
     <a href="${CONTACT.loginHref}">Đăng nhập</a>
-    <button type="button" onclick="openRegModal()" class="btn-brand mobile-reg-btn">Đăng ký dùng thử</button>
+    <a href="${CONTACT.registerHref}" class="btn-brand mobile-reg-btn">Đăng ký dùng thử</a>
   `;
   document.body.insertBefore(drawer, nav.nextSibling);
-
-  const modal = document.createElement("div");
-  modal.id = "regModal";
-  modal.className = "reg-modal";
-  modal.innerHTML = `
-    <div class="reg-modal-card" role="dialog" aria-modal="true" aria-labelledby="regModalTitle">
-      <button onclick="closeRegModal()" class="reg-modal-close" aria-label="Đóng"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
-      <div class="modal-kicker"><i class="fa-solid fa-flask" aria-hidden="true"></i> Alpha Test — Ưu đãi Early User</div>
-      <h3 id="regModalTitle">Đăng ký dùng thử (Miễn phí 1 năm)</h3>
-      <p class="modal-sub">Chương trình Alpha Test: Đăng ký dùng thử ngay hôm nay để nhận <strong>1 năm sử dụng miễn phí</strong> phần mềm kế toán ONE.</p>
-      <form id="modalRegForm" class="modal-reg-form">
-        <label>Họ và tên<input name="name" type="text" placeholder="Nguyễn Văn A" required></label>
-        <label>Email<input name="email" type="email" placeholder="name@company.vn" required></label>
-        <label>Số điện thoại<input name="phone" type="tel" placeholder="09xx xxx xxx" required></label>
-        <label>Mã số thuế<input name="tax" type="text" placeholder="Nhập nếu doanh nghiệp đã có"></label>
-        <label>Sản phẩm quan tâm
-          <select name="product">
-            <option value="" selected>Chọn sản phẩm (Không bắt buộc)</option>
-            <option>Kế toán doanh nghiệp</option>
-            <option>Kế toán hộ kinh doanh</option>
-            <option>Kế toán dịch vụ</option>
-          </select>
-        </label>
-        <button type="submit" class="btn-brand modal-submit">Đăng ký dùng thử</button>
-      </form>
-      <div id="modalSuccess" class="modal-success" hidden>
-        <div class="success-icon"><i class="fa-solid fa-circle-check" aria-hidden="true"></i></div>
-        <h4>Đã nhận thông tin</h4>
-        <p>Đội ngũ kế toán ONE sẽ liên hệ với bạn trong thời gian sớm nhất.</p>
-      </div>
-    </div>
-  `;
-  document.body.appendChild(modal);
-
-  modal.addEventListener("click", (event) => {
-    if (event.target === modal) closeRegModal();
-  });
-  document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape") closeRegModal();
-  });
-
-  document.getElementById("modalRegForm").addEventListener("submit", (event) => {
-    event.preventDefault();
-    submitLeadForm(event.currentTarget, document.getElementById("modalSuccess"));
-  });
 
   document.getElementById("burger").addEventListener("click", () => {
     drawer.classList.toggle("open");
@@ -207,7 +163,7 @@ function renderFooter() {
             <li><a href="#">Tài liệu hướng dẫn</a></li>
             <li><a href="#">Video hướng dẫn</a></li>
             <li><a href="${root}tin-tuc.html">Tin tức & kiến thức</a></li>
-            <li><a href="${root}index.html#dang-ky">Đăng ký dùng thử</a></li>
+            <li><a href="${CONTACT.registerHref}">Đăng ký dùng thử</a></li>
           </ul>
         </div>
       </div>
@@ -249,7 +205,7 @@ function renderCTABand() {
         <h2>Đăng ký dùng thử — Miễn phí 1 năm cho Early User</h2>
         <p>Đưa dữ liệu kế toán về một nơi duy nhất. Đăng ký dùng thử ngay trong đợt Alpha Test để trải nghiệm 1 năm miễn phí toàn bộ phân hệ.</p>
       </div>
-      <button type="button" onclick="openRegModal()" class="btn-white">Đăng ký dùng thử <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+      <a href="${CONTACT.registerHref}" class="btn-white">Đăng ký dùng thử <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
     </div>
   `;
   setTimeout(refreshIcons, 0);
@@ -257,19 +213,10 @@ function renderCTABand() {
 }
 
 function openRegModal() {
-  const modal = document.getElementById("regModal");
-  if (!modal) return;
-  modal.classList.add("open");
-  document.body.style.overflow = "hidden";
-  setTimeout(() => modal.querySelector("input")?.focus(), 80);
+  window.location.href = CONTACT.registerHref;
 }
 
-function closeRegModal() {
-  const modal = document.getElementById("regModal");
-  if (!modal) return;
-  modal.classList.remove("open");
-  document.body.style.overflow = "";
-}
+function closeRegModal() {}
 
 async function submitLeadForm(form, successElement) {
   const button = form.querySelector("button[type='submit']");
