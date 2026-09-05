@@ -312,13 +312,13 @@
           <div style="margin-bottom:18px;">
             <label style="display:block;font-size:12px;font-weight:700;color:var(--gray-text);text-transform:uppercase;margin-bottom:6px;letter-spacing:.05em;">Áp dụng quy định:</label>
             <div class="calc-rule-group">
-              <button type="button" class="calc-rule-btn active" id="ruleCurrent" onclick="switchRule('current')">
+              <button type="button" class="calc-rule-btn active" id="ruleNew" onclick="switchRule('new_2026')">
                 <i class="fa-solid fa-circle-check" aria-hidden="true" style="color:var(--pink);"></i>
-                <span><strong>Quy định hiện hành</strong><br><small style="opacity:.8;">Lương cơ sở 2.340.000đ · Giảm trừ 11tr / 4.4tr</small></span>
+                <span><strong>Quy định hiện hành (Áp dụng từ 01/07/2026)</strong><br><small style="opacity:.8;">Lương cơ sở 2.530.000đ · Giảm trừ 15.5tr / 6.2tr</small></span>
               </button>
-              <button type="button" class="calc-rule-btn" id="ruleNew" onclick="switchRule('new_2026')">
+              <button type="button" class="calc-rule-btn" id="ruleCurrent" onclick="switchRule('current')">
                 <i class="fa-regular fa-circle" aria-hidden="true"></i>
-                <span><strong>Quy định mới (01/07/2026)</strong><br><small style="opacity:.8;">Lương cơ sở 2.530.000đ · Giảm trừ 15.5tr / 6.2tr</small></span>
+                <span><strong>Quy định cũ (Trước 01/07/2026)</strong><br><small style="opacity:.8;">Lương cơ sở 2.340.000đ · Giảm trừ 11tr / 4.4tr</small></span>
               </button>
             </div>
           </div>
@@ -343,10 +343,10 @@
             <div class="calc-form-group">
               <label for="calcRegion">Vùng (áp dụng mức đóng BHTN tối đa):</label>
               <select id="calcRegion" onchange="runFullCalculation()">
-                <option value="1" selected>Vùng I (Hà Nội, TP.HCM, Bình Dương, Hải Phòng...)</option>
-                <option value="2">Vùng II (Đà Nẵng, Cần Thơ, Nha Trang, Huế, Hải Dương...)</option>
-                <option value="3">Vùng III (Các tỉnh/thành phố còn lại)</option>
-                <option value="4">Vùng IV (Các địa bàn nông thôn)</option>
+                <option value="1" selected>Vùng I (5.310.000 đ/tháng - Hà Nội, TP.HCM, Bình Dương, Hải Phòng...)</option>
+                <option value="2">Vùng II (4.730.000 đ/tháng - Đà Nẵng, Cần Thơ, Nha Trang, Huế...)</option>
+                <option value="3">Vùng III (4.140.000 đ/tháng - Các tỉnh/thành còn lại)</option>
+                <option value="4">Vùng IV (3.700.000 đ/tháng - Các địa bàn nông thôn)</option>
               </select>
             </div>
             <div class="calc-form-group">
@@ -506,14 +506,14 @@
         </table>
 
         <h2>2. Các khoản giảm trừ gia cảnh khi tính thuế TNCN</h2>
-        <p>Theo Nghị quyết số 954/2020/UBTVQH14 của Ủy ban Thường vụ Quốc hội:</p>
+        <p>Quy định giảm trừ gia cảnh mới áp dụng từ ngày 01/07/2026:</p>
         <ul>
-          <li><strong>Mức giảm trừ đối với đối tượng nộp thuế:</strong> 11 triệu đồng/tháng (132 triệu đồng/năm).</li>
-          <li><strong>Mức giảm trừ đối với mỗi người phụ thuộc:</strong> 4,4 triệu đồng/tháng cho mỗi người phụ thuộc đã đăng ký mã số thuế người phụ thuộc hợp lệ.</li>
+          <li><strong>Mức giảm trừ đối với đối tượng nộp thuế (Bản thân):</strong> 15,5 triệu đồng/tháng (186 triệu đồng/năm) theo quy định mới (thay thế cho mức 11 triệu đồng/tháng trước 01/07/2026).</li>
+          <li><strong>Mức giảm trừ đối với mỗi người phụ thuộc:</strong> 6,2 triệu đồng/tháng cho mỗi người phụ thuộc có mã số thuế hợp lệ (thay thế mức 4,4 triệu đồng/tháng trước 01/07/2026).</li>
+          <li><strong>Lương cơ sở áp dụng đóng bảo hiểm:</strong> 2.530.000 đồng/tháng (mức trần đóng BHXH, BHYT tối đa là 50,6 triệu đồng).</li>
           <li><strong>Các khoản đóng bảo hiểm bắt buộc:</strong> BHXH 8%, BHYT 1.5%, BHTN 1% được trừ toàn bộ khỏi thu nhập chịu thuế.</li>
-          <li><strong>Các khoản phụ cấp được miễn thuế:</strong> Phụ cấp ăn trưa (tối đa 730.000đ/tháng), phụ cấp trang phục (tối đa 5.000.000đ/năm), phụ cấp điện thoại, công tác phí theo quy chế nội bộ của công ty.</li>
+          <li><strong>Các khoản phụ cấp được miễn thuế:</strong> Phụ cấp ăn trưa, phụ cấp trang phục, điện thoại, công tác phí theo quy chế nội bộ hợp lệ của doanh nghiệp.</li>
         </ul>
-
         <h2>3. Tự động tính thuế TNCN trên phần mềm Kế toán ONE</h2>
         <p>Trong thực tế doanh nghiệp với hàng chục đến hàng trăm nhân viên, việc tính toán thủ công từng bậc thuế rất dễ gây nhầm lẫn. Với phần mềm Kế toán ONE:</p>
         <ul>
@@ -606,7 +606,7 @@
 
   /* ── VietnamWorks Standard Gross-Net & PIT Engine ── */
   let currentMode = "gross_to_net";
-  let currentRule = "current";
+  let currentRule = "new_2026";
 
   function parseMoney(val) {
     if (!val) return 0;
@@ -614,6 +614,24 @@
   }
   function formatMoney(num) {
     return Math.round(num).toLocaleString('vi-VN') + ' đ';
+  }
+
+  function updateRegionDropdown() {
+    const sel = document.getElementById("calcRegion");
+    if (!sel) return;
+    const currentVal = sel.value;
+    if (currentRule === "new_2026") {
+      sel.options[0].text = "Vùng I (5.310.000 đ/tháng - Hà Nội, TP.HCM, Bình Dương, Hải Phòng...)";
+      sel.options[1].text = "Vùng II (4.730.000 đ/tháng - Đà Nẵng, Cần Thơ, Nha Trang, Huế...)";
+      sel.options[2].text = "Vùng III (4.140.000 đ/tháng - Các tỉnh/thành còn lại)";
+      sel.options[3].text = "Vùng IV (3.700.000 đ/tháng - Các địa bàn nông thôn)";
+    } else {
+      sel.options[0].text = "Vùng I (4.960.000 đ/tháng - Hà Nội, TP.HCM, Bình Dương, Hải Phòng...)";
+      sel.options[1].text = "Vùng II (4.410.000 đ/tháng - Đà Nẵng, Cần Thơ, Nha Trang, Huế...)";
+      sel.options[2].text = "Vùng III (3.860.000 đ/tháng - Các tỉnh/thành còn lại)";
+      sel.options[3].text = "Vùng IV (3.450.000 đ/tháng - Các địa bàn nông thôn)";
+    }
+    sel.value = currentVal;
   }
 
   function switchCalcMode(mode) {
@@ -647,20 +665,20 @@
 
   function switchRule(rule) {
     currentRule = rule;
-    document.getElementById("ruleCurrent").classList.toggle("active", rule === "current");
     document.getElementById("ruleNew").classList.toggle("active", rule === "new_2026");
-    const rCurrIcon = document.querySelector("#ruleCurrent i");
+    document.getElementById("ruleCurrent").classList.toggle("active", rule === "current");
     const rNewIcon = document.querySelector("#ruleNew i");
-    if (rule === "current") {
-      rCurrIcon.className = "fa-solid fa-circle-check";
-      rNewIcon.className = "fa-regular fa-circle";
-    } else {
-      rCurrIcon.className = "fa-regular fa-circle";
+    const rCurrIcon = document.querySelector("#ruleCurrent i");
+    if (rule === "new_2026") {
       rNewIcon.className = "fa-solid fa-circle-check";
+      rCurrIcon.className = "fa-regular fa-circle";
+    } else {
+      rNewIcon.className = "fa-regular fa-circle";
+      rCurrIcon.className = "fa-solid fa-circle-check";
     }
+    updateRegionDropdown();
     runFullCalculation();
   }
-
   function toggleInsOption() {
     const opt = document.getElementById("calcInsOption").value;
     document.getElementById("customInsWrap").style.display = opt === "custom" ? "block" : "none";
