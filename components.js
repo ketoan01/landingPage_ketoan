@@ -4,7 +4,8 @@
 "use strict";
 
 const pathParts = window.location.pathname.split("/").filter(Boolean);
-const root = pathParts.includes("tinh-nang") ? "../" : "./";
+const isSubdir = pathParts.includes("tinh-nang") || (pathParts.includes("tin-tuc") && !window.location.pathname.endsWith("tin-tuc.html")) || window.location.pathname.includes("/tin-tuc/") || window.location.pathname.includes("/tinh-nang/");
+const root = isSubdir ? "../" : "./";
 
 const CONTACT = {
   phoneDisplay: "0392 405 600",
@@ -284,3 +285,12 @@ function renderSocialFloat() {
   `;
   document.body.appendChild(container);
 }
+
+window.renderNavbar = renderNavbar;
+window.renderFooter = renderFooter;
+window.renderCTABand = renderCTABand;
+window.renderSocialFloat = renderSocialFloat;
+window.refreshIcons = refreshIcons;
+window.submitLeadForm = submitLeadForm;
+window.CONTACT = CONTACT;
+window.COMPANY = COMPANY;

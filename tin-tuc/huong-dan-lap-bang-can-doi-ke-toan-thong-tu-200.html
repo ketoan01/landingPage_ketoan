@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hướng Dẫn Lập Bảng Cân Đối Kế Toán Theo Thông Tư 200 Chuẩn Từ A Đến Z – Kế toán ONE</title>
+  <meta name="description" content="Hướng dẫn chi tiết từng bước lập Bảng cân đối kế toán mẫu B01-DN theo Thông tư 200/2014/TT-BTC, nguyên tắc đối chiếu Tài sản - Nguồn vốn và mẹo xử lý chênh lệch số liệu."/>
+  <meta name="keywords" content="bảng cân đối kế toán, thông tư 200, lập báo cáo tài chính, mẫu B01-DN, nguyên tắc kế toán tài sản nguồn vốn"/>
+  <meta name="author" content="Chuyên gia Kế toán ONE"/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="https://ketoan.one/tin-tuc/huong-dan-lap-bang-can-doi-ke-toan-thong-tu-200.html"/>
+
+  <!-- Favicon & Icons -->
+  <link rel="icon" type="image/png" href="../assets/logo.png">
+  <link rel="apple-touch-icon" href="../assets/logo.png">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="article"/>
+  <meta property="og:url" content="https://ketoan.one/tin-tuc/huong-dan-lap-bang-can-doi-ke-toan-thong-tu-200.html"/>
+  <meta property="og:title" content="Hướng Dẫn Lập Bảng Cân Đối Kế Toán Theo Thông Tư 200 Chuẩn Từ A Đến Z – Kế toán ONE"/>
+  <meta property="og:description" content="Hướng dẫn chi tiết từng bước lập Bảng cân đối kế toán mẫu B01-DN theo Thông tư 200, nguyên tắc đối chiếu và kiểm tra cân đối tài chính."/>
+  <meta property="og:image" content="https://ketoan.one/assets/og-image.png"/>
+  <meta property="og:site_name" content="Kế toán ONE"/>
+  <meta property="og:locale" content="vi_VN"/>
+  <meta property="article:published_time" content="2026-04-10T08:00:00+07:00"/>
+  <meta property="article:section" content="Nghiệp vụ kế toán"/>
+
+  <!-- Twitter Card -->
+  <meta property="twitter:card" content="summary_large_image"/>
+  <meta property="twitter:url" content="https://ketoan.one/tin-tuc/huong-dan-lap-bang-can-doi-ke-toan-thong-tu-200.html"/>
+  <meta property="twitter:title" content="Hướng Dẫn Lập Bảng Cân Đối Kế Toán Theo Thông Tư 200 Từ A Đến Z"/>
+  <meta property="twitter:description" content="Hướng dẫn chi tiết các bước lập Bảng cân đối kế toán mẫu B01-DN theo TT200."/>
+  <meta property="twitter:image" content="https://ketoan.one/assets/og-image.png"/>
+
+  <!-- Fonts & Styles -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../style.css"/>
+  <link rel="stylesheet" href="../theme-v5.css"/>
+  <link rel="stylesheet" href="../assets/fontawesome/css/all.min.css">
+
+  <style>
+    .news-hero-bg {
+      background: var(--grad-hero);
+      padding: 50px 48px 44px; position: relative; overflow: hidden;
+    }
+    .news-hero-bg::before {
+      content:''; position:absolute; inset:0;
+      background: radial-gradient(ellipse 700px 300px at 60% 80%, rgba(200,57,106,.18) 0%, transparent 70%);
+      pointer-events:none;
+    }
+    .article-main-card {
+      background: #fff; border-radius: 20px;
+      border: 1.5px solid var(--gray-border);
+      padding: 44px; box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+    }
+    @media (max-width: 768px) {
+      .news-hero-bg { padding: 36px 20px 30px; }
+      .article-main-card { padding: 24px 18px; }
+    }
+    .article-header { border-bottom: 1px solid var(--gray-border); padding-bottom: 24px; margin-bottom: 28px; }
+    .article-header h1 { font-size: 28px; font-weight: 800; color: var(--text-dark); line-height: 1.35; margin: 14px 0 16px; }
+    .article-header .meta-row { display: flex; flex-wrap: wrap; align-items: center; gap: 16px; font-size: 13.5px; color: var(--gray-text); }
+    .article-header .meta-row i { color: var(--pink); margin-right: 5px; }
+    .article-body { font-size: 15.5px; color: #2D3748; line-height: 1.85; }
+    .article-body p { margin-bottom: 20px; }
+    .article-body h2 { font-size: 21px; font-weight: 800; color: var(--text-dark); margin: 34px 0 14px; position: relative; padding-bottom: 8px; border-bottom: 2px solid var(--pink-pale); }
+    .article-body h3 { font-size: 17.5px; font-weight: 700; color: var(--text-dark); margin: 26px 0 12px; }
+    .article-body ul, .article-body ol { padding-left: 24px; margin-bottom: 22px; }
+    .article-body li { margin-bottom: 8px; line-height: 1.75; }
+    .article-body strong { color: var(--text-dark); font-weight: 700; }
+    .highlight-box {
+      background: var(--pink-pale); border-left: 4px solid var(--pink);
+      border-radius: 0 12px 12px 0; padding: 18px 22px; margin: 24px 0;
+      font-size: 15px; color: var(--text-dark); font-weight: 600; line-height: 1.65;
+    }
+    .article-cta-box {
+      background: var(--grad-brand); border-radius: 16px;
+      padding: 26px 30px; margin-top: 36px;
+      display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap;
+      box-shadow: 0 8px 24px rgba(200,57,106,.25);
+    }
+    .article-cta-box h4 { color: #fff; font-size: 17px; font-weight: 800; margin-bottom: 4px; }
+    .article-cta-box p { color: rgba(255,255,255,.9); font-size: 14px; margin: 0; }
+    .article-share-box {
+      display: flex; align-items: center; justify-content: space-between; gap: 16px;
+      padding-top: 24px; margin-top: 36px; border-top: 1px solid var(--gray-border); flex-wrap: wrap;
+    }
+    .share-btn-group { display: flex; gap: 10px; flex-wrap: wrap; }
+    .share-btn {
+      display: inline-flex; align-items: center; gap: 6px; padding: 8px 16px; border-radius: 8px;
+      font-size: 13px; font-weight: 600; border: 1px solid var(--gray-border); background: #fff;
+      color: var(--text-dark); cursor: pointer; text-decoration: none; transition: all .2s;
+    }
+    .share-btn:hover { background: var(--gray-soft); border-color: var(--pink); color: var(--pink); }
+    .back-blog-link { display: inline-flex; align-items: center; gap: 8px; color: var(--pink); font-weight: 600; font-size: 14px; margin-bottom: 20px; text-decoration: none; }
+    .back-blog-link:hover { text-decoration: underline; }
+  </style>
+
+  <!-- PostHog Analytics -->
+  <script>
+  !function(t,e){var o,n,p,r;e.__SV||(window.posthog&&window.posthog.__loaded)||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}p||((p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",p.onerror=function(){p=null},(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r));var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people"};u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e};u.reset=function(){u.people.toString=function(){return"posthog.people (stub)"};u.toString=function(){return"posthog (stub)"}};u.loaded=function(){return!0};u.version="1.0.0";u.identify=function(){};u.capture=function(){};u.register=function(){};u.register_once=function(){};u.unregister=function(){};u.opt_in_capturing=function(){};u.opt_out_capturing=function(){};u.has_opted_in_capturing=function(){return!1};u.has_opted_out_capturing=function(){return!0};u.clear_opt_in_out_capturing=function(){};e._i.push([i,s,a])};window.posthog=e}(document,window.posthog||[]);
+  posthog.init('phc_kPiLLWs7uVfBCWPYjdEPcVj9pf8ShkirvT69tZ2UBxta', {
+    api_host: 'https://us.i.posthog.com',
+    defaults: '2026-05-30',
+  });
+  </script>
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Trang chủ",
+            "item": "https://ketoan.one/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Tin tức",
+            "item": "https://ketoan.one/tin-tuc.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Hướng dẫn lập bảng cân đối kế toán theo Thông tư 200",
+            "item": "https://ketoan.one/tin-tuc/huong-dan-lap-bang-can-doi-ke-toan-thong-tu-200.html"
+          }
+        ]
+      },
+      {
+        "@type": "BlogPosting",
+        "@id": "https://ketoan.one/tin-tuc/huong-dan-lap-bang-can-doi-ke-toan-thong-tu-200.html",
+        "headline": "Hướng dẫn lập bảng cân đối kế toán theo TT200 từ A đến Z",
+        "description": "Hướng dẫn chi tiết từng bước lập Bảng cân đối kế toán mẫu B01-DN theo Thông tư 200, nguyên tắc cân đối Tài sản - Nguồn vốn và phương pháp kiểm tra đối chiếu.",
+        "inLanguage": "vi",
+        "datePublished": "2026-04-10T08:00:00+07:00",
+        "dateModified": "2026-04-10T08:00:00+07:00",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://ketoan.one/tin-tuc/huong-dan-lap-bang-can-doi-ke-toan-thong-tu-200.html"
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "Chuyên gia Kế toán ONE",
+          "url": "https://ketoan.one/"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "CÔNG TY TNHH BANANA SOFTWARE",
+          "url": "https://ketoan.one/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://ketoan.one/assets/logo.png"
+          }
+        },
+        "image": "https://ketoan.one/assets/og-image.png"
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<!-- PAGE HERO -->
+<section class="news-hero-bg">
+  <div class="breadcrumb" style="margin-bottom:20px;">
+    <a href="../index.html">Trang chủ</a><span>›</span>
+    <a href="../tin-tuc.html">Tin tức</a><span>›</span>
+    <span style="color:rgba(255,255,255,.9)">Nghiệp vụ kế toán</span>
+  </div>
+  <div style="max-width:800px;">
+    <span class="news-tag" style="background:rgba(255,255,255,.18);color:#fff;margin-bottom:12px;">Nghiệp vụ kế toán</span>
+    <h1 style="color:#fff;font-size:32px;font-weight:900;line-height:1.3;margin-top:10px;">Hướng dẫn lập bảng cân đối kế toán theo TT200 từ A đến Z</h1>
+    <div style="color:rgba(255,255,255,.7);font-size:14px;margin-top:12px;display:flex;align-items:center;gap:14px;flex-wrap:wrap;">
+      <span><i class="fa-solid fa-calendar-days" aria-hidden="true"></i> 10 Tháng 4, 2026</span>
+      <span>·</span>
+      <span><i class="fa-solid fa-clock" aria-hidden="true"></i> 8 phút đọc</span>
+      <span>·</span>
+      <span><i class="fa-solid fa-user-tie" aria-hidden="true"></i> Chuyên gia Kế toán ONE</span>
+    </div>
+  </div>
+</section>
+
+<!-- MAIN CONTENT -->
+<section class="section-pad" style="background:var(--gray-soft);">
+  <div class="news-layout">
+
+    <!-- ARTICLE MAIN BODY -->
+    <article class="article-main-card">
+      <a href="../tin-tuc.html" class="back-blog-link"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Quay lại danh sách tin tức</a>
+
+      <div class="article-body">
+        <p>Bảng cân đối kế toán (Mẫu B01-DN) là báo cáo tài chính tổng hợp phản ánh tổng quát toàn bộ giá trị tài sản hiện có và nguồn hình thành tài sản đó của doanh nghiệp tại một thời điểm nhất định (cuối quý hoặc cuối năm tài chính). Đây là thành phần cốt lõi trong bộ Báo cáo tài chính theo Thông tư 200/2014/TT-BTC mà mọi kế toán trưởng và kế toán tổng hợp đều phải thành thạo.</p>
+
+        <div class="highlight-box">
+          <i class="fa-solid fa-scale-balanced" aria-hidden="true"></i> Nguyên tắc vàng bất biến của Bảng cân đối kế toán:<br/>
+          <strong>TỔNG TÀI SẢN = TỔNG NGUỒN VỐN (NỢ PHẢI TRẢ + VỐN CHỦ SỞ HỮU)</strong>
+        </div>
+
+        <h2>1. Cấu trúc tổng thể của Bảng cân đối kế toán theo TT200</h2>
+        <p>Báo cáo gồm hai phần chính được phân loại theo tính thanh khoản và thời hạn đáo hạn:</p>
+        <ul>
+          <li><strong>PHẦN A – TÀI SẢN (Mã số 100 & 200):</strong>
+            <ul>
+              <li><em>I. Tài sản ngắn hạn (Mã 100):</em> Tiền và tương đương tiền, đầu tư tài chính ngắn hạn, các khoản phải thu ngắn hạn, hàng tồn kho, tài sản ngắn hạn khác.</li>
+              <li><em>II. Tài sản dài hạn (Mã 200):</em> Các khoản phải thu dài hạn, tài sản cố định (hữu hình, vô hình, thuê tài chính), bất động sản đầu tư, tài sản dở dang dài hạn, đầu tư tài chính dài hạn.</li>
+            </ul>
+          </li>
+          <li><strong>PHẦN B – NGUỒN VỐN (Mã số 300 & 400):</strong>
+            <ul>
+              <li><em>I. Nợ phải trả (Mã 300):</em> Nợ ngắn hạn (phải trả người bán, thuế phải nộp, lương nhân viên, vay ngắn hạn) và Nợ dài hạn.</li>
+              <li><em>II. Vốn chủ sở hữu (Mã 400):</em> Vốn góp chủ sở hữu, thặng dư vốn cổ phần, các quỹ doanh nghiệp và lợi nhuận sau thuế chưa phân phối.</li>
+            </ul>
+          </li>
+        </ul>
+
+        <h2>2. Quy trình 5 bước lập bảng cân đối kế toán chính xác 100%</h2>
+        <p>Để lập bảng cân đối kế toán không bị lệch số hoặc sai sót chỉ tiêu, kế toán cần tuân thủ tuần tự theo 5 bước tiêu chuẩn:</p>
+        <ol>
+          <li><strong>Khóa sổ kế toán và kiểm kê thực tế:</strong> Đối chiếu số dư tài khoản ngân hàng (sổ phụ), kiểm kê quỹ tiền mặt, hàng tồn kho và tài sản cố định cuối kỳ.</li>
+          <li><strong>Trích lập các khoản dự phòng và phân bổ:</strong> Trích lập khấu hao TSCĐ (TK 214), phân bổ chi phí trả trước (TK 242), trích lập dự phòng giảm giá hàng tồn kho (TK 229).</li>
+          <li><strong>Bút toán kết chuyển xác định kết quả kinh doanh:</strong> Kết chuyển toàn bộ doanh thu, chi phí từ TK đầu 5, 6, 7, 8 sang TK 911 để xác định lãi/lỗ đưa về TK 421. Đảm bảo các tài khoản loại 5 đến loại 9 không còn số dư cuối kỳ.</li>
+          <li><strong>Lập Bảng cân đối số phát sinh (Trial Balance):</strong> Kiểm tra nguyên tắc Cân bằng: Tổng phát sinh Nợ = Tổng phát sinh Có, Tổng dư Nợ = Tổng dư Có.</li>
+          <li><strong>Lên chỉ tiêu Bảng cân đối kế toán Mẫu B01-DN:</strong> Nhặt số dư cuối kỳ của từng tài khoản tương ứng đưa vào các mã số chỉ tiêu của bảng cân đối.</li>
+        </ol>
+
+        <h2>3. Những sai sót thường gặp khiến Bảng cân đối kế toán không cân</h2>
+        <p>Trong thực tế làm báo cáo, kế toán thường gặp tình huống "Tài sản không bằng Nguồn vốn". Dưới đây là các nguyên nhân phổ biến nhất:</p>
+        <ul>
+          <li><strong>Bù trừ số dư tài khoản lưỡng tính:</strong> Các tài khoản như 131 (Phải thu khách hàng) và 331 (Phải trả người bán) tuyệt đối không được bù trừ số dư Nợ và Có. Dư Nợ 131 đưa vào Tài sản, dư Có 131 đưa vào Nguồn vốn (Người mua trả tiền trước).</li>
+          <li><strong>Quên ghi âm các chỉ tiêu đặc biệt:</strong> Khấu hao TSCĐ (TK 214), Dự phòng tổn thất tài sản (TK 229), Cổ phiếu quỹ (TK 419) hoặc Lỗ lũy kế (TK 421) phải được ghi bằng số âm (trong ngoặc đơn) trên báo cáo.</li>
+          <li><strong>Hạch toán sót hoặc lặp bút toán:</strong> Sai sót khi nhập liệu thủ công trên Excel rất dễ bỏ sót các bút toán cuối kỳ hoặc cộng đúp dòng công thức.</li>
+        </ul>
+
+        <div class="article-cta-box">
+          <div>
+            <h4>Kế toán ONE tự động lập Báo cáo tài chính theo TT200</h4>
+            <p>Tự động nhặt số liệu từ chứng từ gốc, phát hiện lỗi lệch sổ và xuất báo cáo trong 30 giây.</p>
+          </div>
+          <a href="../tinh-nang/bao-cao-tai-chinh.html" class="btn-white" style="text-decoration:none;padding:11px 22px;font-size:13px;white-space:nowrap;">Xem tính năng BCTC</a>
+        </div>
+
+        <h2>4. Tự động hóa lập báo cáo tài chính với Kế toán ONE</h2>
+        <p>Với phần mềm Kế toán ONE, toàn bộ quy trình 5 bước phức tạp trên được số hóa toàn diện:</p>
+        <ul>
+          <li>Hệ thống tự động kiểm tra tính hợp lệ của từng định khoản khi nhập chứng từ.</li>
+          <li>Chức năng tự động kết chuyển doanh thu, chi phí chỉ với 1 thao tác bấm chuột.</li>
+          <li>Bảng cân đối kế toán, Báo cáo kết quả HĐKD và Báo cáo lưu chuyển tiền tệ được tạo lập tức thời, kết xuất trực tiếp định dạng XML nộp lên Cổng thuế qua phần mềm HTKK không lo lỗi định dạng.</li>
+        </ul>
+      </div>
+
+      <!-- Share & Navigation -->
+      <div class="article-share-box">
+        <div style="font-size:13.5px;font-weight:700;color:var(--text-dark);">
+          <i class="fa-solid fa-share-nodes" style="color:var(--pink);margin-right:6px;" aria-hidden="true"></i> Chia sẻ bài viết:
+        </div>
+        <div class="share-btn-group">
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https://ketoan.one/tin-tuc/huong-dan-lap-bang-can-doi-ke-toan-thong-tu-200.html" target="_blank" rel="noopener" class="share-btn"><i class="fa-brands fa-facebook" style="color:#1877F2;" aria-hidden="true"></i> Facebook</a>
+          <a href="https://zalo.me/share?url=https://ketoan.one/tin-tuc/huong-dan-lap-bang-can-doi-ke-toan-thong-tu-200.html" target="_blank" rel="noopener" class="share-btn"><i class="fa-solid fa-comment-dots" style="color:#0068FF;" aria-hidden="true"></i> Zalo</a>
+          <button onclick="navigator.clipboard.writeText(window.location.href);alert('Đã copy đường dẫn bài viết!');" class="share-btn"><i class="fa-solid fa-link" aria-hidden="true"></i> Copy Link</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- SIDEBAR -->
+    <aside>
+      <div class="ads-widget">
+        <h4>Phần mềm kế toán<br>Kế toán ONE</h4>
+        <p>Đầy đủ mẫu biểu BCTC theo TT200 và TT133. Tự động kiểm tra sai lệch số liệu.</p>
+        <a href="https://app.ketoan.one/register" class="btn-white" style="display:block;text-align:center;padding:11px 20px;font-size:13px;text-decoration:none;">ĐĂNG KÝ DÙNG THỬ</a>
+      </div>
+
+      <div class="sidebar-widget">
+        <h4><i class="fa-solid fa-fire" aria-hidden="true" style="color:var(--pink);"></i> Chủ đề nổi bật</h4>
+        <ul class="sidebar-list">
+          <li><a href="../tinh-nang/bao-cao-tai-chinh.html">Báo cáo tài chính tự động</a></li>
+          <li><a href="../tin-tuc.html?cat=nghiep-vu">Nghiệp vụ kế toán tổng hợp</a></li>
+          <li><a href="../tin-tuc.html?cat=mau-bieu">20 Mẫu bảng lương Excel 2026</a></li>
+          <li><a href="../tinh-nang/ke-toan-tong-hop.html">Phân hệ kế toán tổng hợp</a></li>
+          <li><a href="../tin-tuc/5-loi-ke-toan-pho-bien-khi-xu-ly-hoa-don-dien-tu.html">Lỗi hóa đơn điện tử thường gặp</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-widget">
+        <h4>Bài viết liên quan</h4>
+        <ul class="sidebar-list">
+          <li>
+            <a href="5-loi-ke-toan-pho-bien-khi-xu-ly-hoa-don-dien-tu.html">5 lỗi thường gặp khi xử lý hóa đơn điện tử</a>
+            <div class="meta">22/03/2026</div>
+          </li>
+          <li>
+            <a href="tong-hop-20-mau-bang-luong-excel-chuan-2026.html">Tổng hợp 20 mẫu bảng lương Excel chuẩn 2026</a>
+            <div class="meta">05/04/2026</div>
+          </li>
+          <li>
+            <a href="chinh-sach-giam-thue-gtgt-ho-kinh-doanh-2026.html">Chính sách giảm thuế GTGT cho hộ kinh doanh</a>
+            <div class="meta">15/05/2026</div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="sidebar-widget" style="background:var(--pink-pale);border:1.5px solid rgba(200,57,106,.15);">
+        <h4><i class="fa-solid fa-envelope" aria-hidden="true" style="color:var(--pink);"></i> Nhận cẩm nang kế toán</h4>
+        <p style="font-size:13px;color:var(--gray-text);margin-bottom:14px;line-height:1.6;">Tổng hợp kiến thức nghiệp vụ và thủ thuật kế toán gửi thẳng vào email.</p>
+        <input type="email" placeholder="Email của bạn..." style="width:100%;padding:10px 14px;border-radius:10px;border:1.5px solid var(--gray-border);font-family:inherit;font-size:13px;margin-bottom:10px;outline:none;background:#fff;"/>
+        <button class="btn-brand" style="width:100%;padding:11px;font-size:13.5px;" onclick="alert('Cảm ơn bạn đã đăng ký nhận tài liệu!');">Đăng ký ngay</button>
+      </div>
+    </aside>
+
+  </div>
+</section>
+
+<div id="cta-slot"></div>
+
+<script src="../components.js"></script>
+<script>
+  renderNavbar("tin-tuc");
+  renderSocialFloat();
+  const cta = renderCTABand();
+  document.getElementById("cta-slot").replaceWith(cta);
+  renderFooter();
+  refreshIcons();
+</script>
+<script src="../main.js"></script>
+</body>
+</html>
