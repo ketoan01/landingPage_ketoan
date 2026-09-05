@@ -521,7 +521,7 @@ svg { display: block; }
 /* Footer */
 footer { padding: 0; background: #0f1526; }
 .footer-inner { padding-block: 60px 25px; }
-.footer-grid { grid-template-columns: 1.8fr 1.3fr 1fr; gap: 48px; margin-bottom: 45px; }
+.footer-grid { grid-template-columns: 1.4fr 1fr 1.15fr 0.9fr; gap: 36px; margin-bottom: 45px; }
 .footer-logo { margin: 0 0 17px; }
 .footer-logo .logo-text { color: #fff; }
 .footer-brand p { max-width: 360px; margin: 0 0 20px; color: rgba(255,255,255,.5); }
@@ -594,8 +594,8 @@ footer a { color: rgba(255,255,255,.5); }
   .reg-wrap { grid-template-columns: 1fr; }
   .reg-left { max-width: 800px; }
   .reg-card { width: min(560px, 100%); }
-  .footer-grid { grid-template-columns: 1.5fr 1fr 1fr; }
-  .footer-grid > div:last-child { grid-column: 2 / 4; }
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+  .footer-grid > div:last-child { grid-column: auto; }
 }
 
 @media (max-width: 768px) {

@@ -171,12 +171,22 @@ function renderFooter() {
           </ul>
         </div>
         <div>
+          <h4>Bài viết mới nhất</h4>
+          <ul>
+            <li><a href="${root}tin-tuc/chinh-sach-giam-thue-gtgt-ho-kinh-doanh-2026.html">Giảm thuế GTGT 8% đến hết 2026</a></li>
+            <li><a href="${root}tin-tuc/huong-dan-lap-bang-can-doi-ke-toan-thong-tu-200.html">Lập bảng cân đối kế toán TT200</a></li>
+            <li><a href="${root}tin-tuc/cong-cu-tinh-thue-tncn-online-2026.html">Công cụ tính thuế TNCN 2026</a></li>
+            <li><a href="${root}tin-tuc/tong-hop-20-mau-bang-luong-excel-chuan-2026.html">20 Mẫu bảng lương Excel 2026</a></li>
+            <li><a href="${root}tin-tuc/5-loi-ke-toan-pho-bien-khi-xu-ly-hoa-don-dien-tu.html">5 lỗi xử lý hóa đơn điện tử</a></li>
+          </ul>
+        </div>
+        <div>
           <h4>Hỗ trợ</h4>
           <ul>
-            <li><a href="#">Tài liệu hướng dẫn</a></li>
-            <li><a href="#">Video hướng dẫn</a></li>
+            <li><a href="${root}tinh-nang.html">Xem toàn bộ phân hệ</a></li>
             <li><a href="${root}tin-tuc.html">Tin tức & kiến thức</a></li>
             <li><a href="${CONTACT.registerHref}">Đăng ký dùng thử</a></li>
+            <li><a href="${CONTACT.loginHref}">Đăng nhập phần mềm</a></li>
           </ul>
         </div>
       </div>
