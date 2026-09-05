@@ -448,7 +448,7 @@
         </div>
 
         <h2>1. Biểu thuế suất lũy tiến từng phần 2026</h2>
-        <p>Thuế thu nhập cá nhân đối với thu nhập từ tiền lương, tiền công được áp dụng theo Biểu thuế lũy tiến từng phần quy định tại Luật Thuế TNCN:</p>
+        <p>Thuế thu nhập cá nhân đối với thu nhập từ tiền lương, tiền công được áp dụng theo Biểu thuế lũy tiến từng phần quy định tại <strong>Luật sửa đổi Thuế TNCN (áp dụng từ 01/07/2026)</strong>:</p>
 
         <table class="tax-table">
           <thead>
@@ -462,45 +462,45 @@
           <tbody>
             <tr>
               <td><strong>Bậc 1</strong></td>
-              <td>Đến 5 triệu đồng</td>
+              <td>Đến 10 triệu đồng</td>
               <td><strong>5%</strong></td>
               <td>5% TNTT</td>
             </tr>
             <tr>
               <td><strong>Bậc 2</strong></td>
-              <td>Trên 5 đến 10 triệu đồng</td>
+              <td>Trên 10 đến 30 triệu đồng</td>
               <td><strong>10%</strong></td>
-              <td>10% TNTT – 0.25 triệu</td>
+              <td>10% TNTT – 0,5 triệu</td>
             </tr>
             <tr>
               <td><strong>Bậc 3</strong></td>
-              <td>Trên 10 đến 18 triệu đồng</td>
+              <td>Trên 30 đến 60 triệu đồng</td>
               <td><strong>15%</strong></td>
-              <td>15% TNTT – 0.75 triệu</td>
+              <td>15% TNTT – 2 triệu</td>
             </tr>
             <tr>
               <td><strong>Bậc 4</strong></td>
-              <td>Trên 18 đến 32 triệu đồng</td>
+              <td>Trên 60 đến 90 triệu đồng</td>
               <td><strong>20%</strong></td>
-              <td>20% TNTT – 1.65 triệu</td>
+              <td>20% TNTT – 5 triệu</td>
             </tr>
             <tr>
               <td><strong>Bậc 5</strong></td>
-              <td>Trên 32 đến 52 triệu đồng</td>
+              <td>Trên 90 đến 150 triệu đồng</td>
               <td><strong>25%</strong></td>
-              <td>25% TNTT – 3.25 triệu</td>
+              <td>25% TNTT – 9,5 triệu</td>
             </tr>
             <tr>
               <td><strong>Bậc 6</strong></td>
-              <td>Trên 52 đến 80 triệu đồng</td>
+              <td>Trên 150 đến 210 triệu đồng</td>
               <td><strong>30%</strong></td>
-              <td>30% TNTT – 5.85 triệu</td>
+              <td>30% TNTT – 17 triệu</td>
             </tr>
             <tr>
               <td><strong>Bậc 7</strong></td>
-              <td>Trên 80 triệu đồng</td>
+              <td>Trên 210 triệu đồng</td>
               <td><strong>35%</strong></td>
-              <td>35% TNTT – 9.85 triệu</td>
+              <td>35% TNTT – 27,5 triệu</td>
             </tr>
           </tbody>
         </table>
@@ -708,17 +708,28 @@
 
   function getTaxBreakdown(tntt) {
     if (tntt <= 0) return { totalTax: 0, tiers: [] };
-    const tiersDef = [
-      { span: 5000000, rate: 0.05, label: "Bậc 1: Đến 5 triệu (5%)" },
-      { span: 5000000, rate: 0.10, label: "Bậc 2: Trên 5 đến 10 triệu (10%)" },
-      { span: 8000000, rate: 0.15, label: "Bậc 3: Trên 10 đến 18 triệu (15%)" },
-      { span: 14000000, rate: 0.20, label: "Bậc 4: Trên 18 đến 32 triệu (20%)" },
-      { span: 20000000, rate: 0.25, label: "Bậc 5: Trên 32 đến 52 triệu (25%)" },
-      { span: 28000000, rate: 0.30, label: "Bậc 6: Trên 52 đến 80 triệu (30%)" },
-      { span: Infinity, rate: 0.35, label: "Bậc 7: Trên 80 triệu (35%)" }
+    // New 2026 brackets (from 01/07/2026, Luật sửa đổi Thuế TNCN):
+    // Bậc 1: 0–10M 5%, Bậc 2: 10–30M 10%, Bậc 3: 30–60M 15%
+    // Bậc 4: 60–90M 20%, Bậc 5: 90–150M 25%, Bậc 6: 150–210M 30%, Bậc 7: >210M 35%
+    // Old brackets (pre-2026): 0–5M 5%, 5–10M 10%, 10–18M 15%, 18–32M 20%, 32–52M 25%, 52–80M 30%, >80M 35%
+    const tiersDef = currentRule === "new_2026" ? [
+      { span:  10000000, rate: 0.05, label: "Bậc 1: Đến 10 triệu (5%)" },
+      { span:  20000000, rate: 0.10, label: "Bậc 2: Trên 10 đến 30 triệu (10%)" },
+      { span:  30000000, rate: 0.15, label: "Bậc 3: Trên 30 đến 60 triệu (15%)" },
+      { span:  30000000, rate: 0.20, label: "Bậc 4: Trên 60 đến 90 triệu (20%)" },
+      { span:  60000000, rate: 0.25, label: "Bậc 5: Trên 90 đến 150 triệu (25%)" },
+      { span:  60000000, rate: 0.30, label: "Bậc 6: Trên 150 đến 210 triệu (30%)" },
+      { span: Infinity,  rate: 0.35, label: "Bậc 7: Trên 210 triệu (35%)" }
+    ] : [
+      { span:   5000000, rate: 0.05, label: "Bậc 1: Đến 5 triệu (5%)" },
+      { span:   5000000, rate: 0.10, label: "Bậc 2: Trên 5 đến 10 triệu (10%)" },
+      { span:   8000000, rate: 0.15, label: "Bậc 3: Trên 10 đến 18 triệu (15%)" },
+      { span:  14000000, rate: 0.20, label: "Bậc 4: Trên 18 đến 32 triệu (20%)" },
+      { span:  20000000, rate: 0.25, label: "Bậc 5: Trên 32 đến 52 triệu (25%)" },
+      { span:  28000000, rate: 0.30, label: "Bậc 6: Trên 52 đến 80 triệu (30%)" },
+      { span: Infinity,  rate: 0.35, label: "Bậc 7: Trên 80 triệu (35%)" }
     ];
-    let rem = tntt;
-    let totalTax = 0;
+    let rem = tntt, totalTax = 0;
     const tiers = [];
     for (let i = 0; i < tiersDef.length; i++) {
       if (rem <= 0) break;
@@ -726,11 +737,7 @@
       const taxableInBracket = Math.min(rem, t.span);
       const taxInBracket = taxableInBracket * t.rate;
       totalTax += taxInBracket;
-      tiers.push({
-        label: t.label,
-        taxable: taxableInBracket,
-        tax: taxInBracket
-      });
+      tiers.push({ label: t.label, taxable: taxableInBracket, tax: taxInBracket });
       rem -= taxableInBracket;
     }
     return { totalTax, tiers };
@@ -781,20 +788,46 @@
       const convIncome = Math.max(0, net - totalDeduct);
       if (convIncome <= 0) {
         tntt = 0;
-      } else if (convIncome <= 4750000) {
-        tntt = convIncome / 0.95;
-      } else if (convIncome <= 9250000) {
-        tntt = (convIncome - 250000) / 0.90;
-      } else if (convIncome <= 16050000) {
-        tntt = (convIncome - 750000) / 0.85;
-      } else if (convIncome <= 27250000) {
-        tntt = (convIncome - 1650000) / 0.80;
-      } else if (convIncome <= 42250000) {
-        tntt = (convIncome - 3250000) / 0.75;
-      } else if (convIncome <= 61850000) {
-        tntt = (convIncome - 5850000) / 0.70;
+      } else if (currentRule === "new_2026") {
+        // New 2026 brackets conv→TNTT thresholds:
+        // Bậc 1 max conv: 10M×0.95 = 9,500,000
+        // Bậc 2 max conv: 30M − (30M×0.1−0.5M) = 27,500,000
+        // Bậc 3 max conv: 60M − (60M×0.15−2M)  = 53,000,000
+        // Bậc 4 max conv: 90M − (90M×0.20−5M)  = 77,000,000
+        // Bậc 5 max conv: 150M− (150M×0.25−9.5M)=122,000,000
+        // Bậc 6 max conv: 210M− (210M×0.30−17M) =164,000,000
+        if (convIncome <= 9500000) {
+          tntt = convIncome / 0.95;
+        } else if (convIncome <= 27500000) {
+          tntt = (convIncome - 500000) / 0.90;
+        } else if (convIncome <= 53000000) {
+          tntt = (convIncome - 2000000) / 0.85;
+        } else if (convIncome <= 77000000) {
+          tntt = (convIncome - 5000000) / 0.80;
+        } else if (convIncome <= 122000000) {
+          tntt = (convIncome - 9500000) / 0.75;
+        } else if (convIncome <= 164000000) {
+          tntt = (convIncome - 17000000) / 0.70;
+        } else {
+          tntt = (convIncome - 27500000) / 0.65;
+        }
       } else {
-        tntt = (convIncome - 9850000) / 0.65;
+        // Old brackets (pre-2026)
+        if (convIncome <= 4750000) {
+          tntt = convIncome / 0.95;
+        } else if (convIncome <= 9250000) {
+          tntt = (convIncome - 250000) / 0.90;
+        } else if (convIncome <= 16050000) {
+          tntt = (convIncome - 750000) / 0.85;
+        } else if (convIncome <= 27250000) {
+          tntt = (convIncome - 1650000) / 0.80;
+        } else if (convIncome <= 42250000) {
+          tntt = (convIncome - 3250000) / 0.75;
+        } else if (convIncome <= 61850000) {
+          tntt = (convIncome - 5850000) / 0.70;
+        } else {
+          tntt = (convIncome - 9850000) / 0.65;
+        }
       }
       taxRes = getTaxBreakdown(tntt);
       incomeBeforeTax = net + taxRes.totalTax;
