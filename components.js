@@ -3,9 +3,21 @@
    ───────────────────────────────────────── */
 "use strict";
 
-const pathParts = window.location.pathname.split("/").filter(Boolean);
-const isSubdir = pathParts.includes("tinh-nang") || (pathParts.includes("tin-tuc") && !window.location.pathname.endsWith("tin-tuc.html")) || window.location.pathname.includes("/tin-tuc/") || window.location.pathname.includes("/tinh-nang/");
-const root = isSubdir ? "../" : "./";
+function resolveRoot() {
+  if (typeof window !== "undefined" && window.__PAGE_ROOT__) {
+    return window.__PAGE_ROOT__;
+  }
+  const pathname = typeof window !== "undefined" && window.location ? window.location.pathname : "";
+  if (pathname.includes("/tin-tuc/") || pathname.includes("/tinh-nang/")) {
+    return "../";
+  }
+  const parts = pathname.split("/").filter(Boolean);
+  if (parts.includes("tinh-nang") || (parts.includes("tin-tuc") && !pathname.endsWith("tin-tuc.html"))) {
+    return "../";
+  }
+  return "./";
+}
+const root = resolveRoot();
 
 const CONTACT = {
   phoneDisplay: "0392 405 600",

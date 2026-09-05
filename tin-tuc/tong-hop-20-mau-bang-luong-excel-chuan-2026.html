@@ -42,9 +42,12 @@
 
   <style>
     .news-hero-bg {
-      background: var(--grad-hero);
-      padding: 50px 48px 44px; position: relative; overflow: hidden;
+      background: linear-gradient(145deg, #151c30 0%, #24223c 65%, #4e2345 100%);
+      padding: 56px 48px 48px; position: relative; overflow: hidden;
     }
+    .breadcrumb a { color: rgba(255,255,255,.75); text-decoration: none; }
+    .breadcrumb a:hover { color: #fff; text-decoration: underline; }
+    .breadcrumb span { color: rgba(255,255,255,.5); }
     .news-hero-bg::before {
       content:''; position:absolute; inset:0;
       background: radial-gradient(ellipse 700px 300px at 60% 80%, rgba(200,57,106,.18) 0%, transparent 70%);
@@ -334,7 +337,8 @@
 
 <div id="cta-slot"></div>
 
-<script src="../components.js"></script>
+<script>window.__PAGE_ROOT__ = "../";</script>
+<script src="../components.js?v=20260515v3"></script>
 <script>
   renderNavbar("tin-tuc");
   renderSocialFloat();
